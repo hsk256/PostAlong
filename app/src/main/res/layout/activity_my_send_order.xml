@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 包含toolbar -->
+    <include layout="@layout/include_toolbar_order_filter" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_toolbar">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_nomorethings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/none_pic"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_above="@+id/tv_info"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/text_size_8"
+                    android:padding="@dimen/dp_48"
+                    android:text="@string/common_tip_no_network"
+                    android:textColor="@color/edit_text_hint"
+                    android:textSize="@dimen/text_size_16" />
+            </RelativeLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.android.publicexpress.ui.widget.LoadUpListView
+                    android:id="@+id/lv_my_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="@dimen/dp_8"
+                    android:footerDividersEnabled="false" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

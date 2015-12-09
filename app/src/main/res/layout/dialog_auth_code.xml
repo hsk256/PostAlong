@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/customDialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:padding="@dimen/dp_8"
+            android:text="@string/auth_input_valid_code"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/text_size_14" />
+
+        <com.android.publicexpress.ui.widget.EditTextWithDel
+            android:id="@+id/et_pickup_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:gravity="center"
+            android:hint="@string/auth_hint_input_code"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:textColor="#ffff4545"
+            android:textColorHint="#FC7171"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</RelativeLayout>

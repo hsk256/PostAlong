@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--本页面是接单的订单详情-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/get_order_button"
+        android:layout_below="@+id/ll_toolbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--地址详情-->
+            <include layout="@layout/include_order_detail_part_of_address" />
+            <!--物品详情-->
+            <include layout="@layout/include_order_detail_part_of_good" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--按钮：加价与抢单-->
+    <include
+        layout="@layout/include_order_detail_btn_markup_collect" />
+
+    <include
+        layout="@layout/include_loading" />
+
+</RelativeLayout>

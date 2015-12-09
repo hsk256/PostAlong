@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_btn_bottom_common"
+    style="@style/ll_btn_bottom_common"
+    android:layout_height="@dimen/dp_48">
+
+    <View style="@style/h_line" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        style="@style/tv_btn_bottom"
+        android:text="@string/common_save_success"
+        android:textColor="@color/main_green_26a65b" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pay"
+    style="@style/ll_btn_bottom_common"
+    android:visibility="gone">
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        style="@style/ll_btn_bottom_common_inner"
+        android:orientation="horizontal">
+
+        <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_double.left">
+
+            <TextView
+                android:id="@+id/btn_pay"
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/btn_order_pay" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_double.right.red">
+
+            <TextView
+                android:id="@+id/btn_pay_cancel"
+                style="@style/tv_btn_bottom_red"
+                android:text="@string/common_cancel" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</LinearLayout>

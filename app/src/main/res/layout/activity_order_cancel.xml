@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_margin="@dimen/div_margin_left_right"
+        android:layout_marginBottom="@dimen/dp_62"
+        android:background="@drawable/bg_wrap_border"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/rg_order_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8">
+
+            <RadioButton
+                android:id="@+id/rb_cancel1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:text="@string/reason_cancel_1"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8" />
+
+            <RadioButton
+                android:id="@+id/rb_cancel2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:text="@string/reason_cancel_2"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8" />
+
+            <RadioButton
+                android:id="@+id/rb_cancel3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:text="@string/reason_cancel_3"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                style="@style/h_line"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8" />
+
+            <RadioButton
+                android:id="@+id/rb_cancel4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:text="@string/reason_cancel_4"
+                android:textSize="@dimen/text_size_15" />
+        </RadioGroup>
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_btn_bottom_common">
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_cancel_submit"
+            style="@style/ripple_btn_bottom_single_navy_blue">
+
+            <TextView
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/common_submit" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</RelativeLayout>

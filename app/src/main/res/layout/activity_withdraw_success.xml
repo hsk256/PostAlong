@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        style="@style/ll_success">
+
+        <ImageView
+            style="@style/iv_success_ok"/>
+
+        <TextView
+            android:id="@+id/tv_pay_result"
+            style="@style/tv_success_title"
+            android:text="@string/success_withdraw_title" />
+
+        <TextView
+            style="@style/tv_success_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/success_withdraw_content"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_btn_bottom_common">
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple_btn_bottom"
+            style="@style/ripple_btn_bottom_single_navy_blue">
+
+            <TextView
+                android:id="@+id/btn_send_next_step"
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/menu_my_wallet" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+</RelativeLayout>

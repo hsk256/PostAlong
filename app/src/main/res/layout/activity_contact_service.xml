@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/bg_grey_F7F7F7"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_margin="@dimen/div_margin_left_right"
+        android:layout_marginBottom="@dimen/dp_62"
+        android:background="@drawable/bg_wrap_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_10"
+                android:background="@drawable/bg_wrap_border">
+
+                <EditText
+                    android:id="@+id/et_content"
+                    style="@style/et_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:lineSpacingExtra="3dp"
+                    android:minLines="5"
+                    android:gravity="left|top"
+                    android:hint="@string/suggestion_feedback"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:minHeight="@dimen/dp_200"
+                    android:singleLine="false" />
+
+                <TextView
+                    android:id="@+id/tv_words"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:text="@string/common_tip_input_words"
+                    android:textColor="@color/tv_name"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/bg_grey_F7F7F7"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_60">
+
+                <TextView
+                    android:id="@+id/call_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/setting_service_phone" />
+
+                <TextView
+                    android:id="@+id/callus"
+                    android:layout_toRightOf="@+id/call_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:textColor="@color/main_green_26a65b"
+                    android:text="@string/setting_phone_number" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--底部状态栏-->
+    <!--<include layout="@layout/include_bottom_status"/>-->
+</RelativeLayout>

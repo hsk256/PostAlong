@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主页banner字体长度-->
+    <integer name="wc_main">80</integer>
+
+</resources>

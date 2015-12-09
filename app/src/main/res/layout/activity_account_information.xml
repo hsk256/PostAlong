@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ll_toolbar"
+        layout="@layout/toolbar" />
+
+    <include layout="@layout/include_loading" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:visibility="visible">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120">
+
+                        <ImageView
+                            android:id="@+id/background_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/main_green_26a65b"
+                            android:contentDescription="@null"
+                            android:scaleType="centerCrop" />
+
+                        <!--修改背景图片-->
+                        <!--<ImageView-->
+                        <!--android:id="@+id/bg_edit"-->
+                        <!--android:layout_width="@dimen/dp_24"-->
+                        <!--android:layout_height="@dimen/dp_24"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:src="@drawable/bg_edit_img" />-->
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_92_fu"
+                        android:gravity="center_horizontal">
+
+                        <!--头像部分-->
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_centerHorizontal="true">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/head_pic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/icon_default_head"
+                                app:border_color="@color/head_pic_border"
+                                app:border_width="@dimen/dp_3" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@mipmap/icon_camera_circle" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!--表单部分-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <View style="@style/h_line" />
+
+                        <RelativeLayout style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/family_name"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_family_name" />
+
+                            <EditText
+                                android:id="@+id/account_family_name"
+                                style="@style/et_account"
+                                android:layout_toRightOf="@+id/family_name"
+                                android:maxLength="@integer/family_name_max" />
+
+                            <ImageView
+                                android:id="@+id/family_name_edit_img"
+                                style="@style/iv_account_edit" />
+
+                        </RelativeLayout>
+
+                        <View style="@style/h_line" />
+
+                        <RelativeLayout style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/first_name"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_first_name" />
+
+                            <EditText
+                                android:id="@+id/account_first_name"
+                                style="@style/et_account"
+                                android:layout_toRightOf="@+id/first_name"
+                                android:maxLength="@integer/first_name_max" />
+
+                            <ImageView
+                                android:id="@+id/first_name_edit_img"
+                                style="@style/iv_account_edit" />
+                        </RelativeLayout>
+
+                        <View style="@style/h_line" />
+
+                        <RelativeLayout style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/tv_gender_name"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_gender" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_10"
+                                android:layout_toRightOf="@+id/tv_gender_name"
+                                android:gravity="left|center_vertical"
+                                android:minHeight="@dimen/dp_48"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_gender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/icon_male" />
+
+                                <TextView
+                                    android:id="@+id/tv_gender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:text="male"
+                                    android:textSize="@dimen/text_size_16" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_gender_edit_img"
+                                style="@style/iv_account_edit" />
+
+                        </RelativeLayout>
+
+                        <ImageView style="@style/iv_account_line" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_account"
+                            style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/phone"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_phone" />
+
+                            <EditText
+                                android:id="@+id/account_phone"
+                                style="@style/et_account"
+                                android:layout_toRightOf="@+id/phone"
+                                android:inputType="phone" />
+
+                            <ImageView
+                                android:id="@+id/phone_edit_img"
+                                style="@style/iv_account_edit" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/rl_account_line"
+                            style="@style/h_line" />
+
+                        <RelativeLayout style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/email"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_email" />
+
+                            <EditText
+                                android:id="@+id/account_email"
+                                style="@style/et_account"
+                                android:layout_toRightOf="@+id/email"
+                                android:inputType="textEmailSubject"
+                                android:maxLength="@integer/email_max" />
+
+                            <ImageView
+                                android:id="@+id/email_edit_img"
+                                style="@style/iv_account_edit" />
+
+                        </RelativeLayout>
+
+                        <View style="@style/h_line" />
+
+                        <RelativeLayout style="@style/rl_account">
+
+                            <TextView
+                                android:id="@+id/nation"
+                                style="@style/tv_account_name"
+                                android:text="@string/acc_info_nationality" />
+
+                            <TextView
+                                android:id="@+id/account_nation"
+                                style="@style/tv_account_value"
+                                android:layout_toRightOf="@+id/nation"
+                                android:enabled="false"
+                                android:text="Canada"
+                                android:textColor="@color/tv_value" />
+
+                        </RelativeLayout>
+
+                        <ImageView style="@style/iv_account_line" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_un_modified"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout style="@style/rl_account">
+
+                                <TextView
+                                    android:id="@+id/credibility"
+                                    style="@style/tv_account_name"
+                                    android:text="@string/acc_info_credibility" />
+
+                                <ImageView
+                                    android:id="@+id/credibility_img"
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_30"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/credibility"
+                                    android:src="@mipmap/icon_p_title_shibing" />
+
+                                <TextView
+                                    android:id="@+id/account_pittle"
+                                    style="@style/tv_account_value"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:layout_toRightOf="@+id/credibility_img" />
+
+                            </RelativeLayout>
+
+                            <View style="@style/h_line" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/rl_deliver_info"
+                                style="@style/rl_account">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="@dimen/dp_48">
+
+                                    <TextView
+                                        android:id="@+id/tv_is_deliver"
+                                        style="@style/tv_account_name"
+                                        android:text="@string/acc_info_deliver_info" />
+
+                                    <ImageView
+                                        android:id="@+id/create_order_arrow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:background="@mipmap/ic_arrow_right" />
+
+                                </RelativeLayout>
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_payword_line"
+                                style="@style/iv_account_line" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/rl_account_password"
+                                style="@style/rl_account">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="@dimen/dp_48">
+
+                                    <TextView
+                                        android:id="@+id/password"
+                                        style="@style/tv_account_name"
+                                        android:text="@string/acc_info_pwd" />
+
+                                    <EditText
+                                        android:id="@+id/account_password"
+                                        style="@style/et_account"
+                                        android:layout_toRightOf="@+id/password"
+                                        android:fontFamily="sans-serif"
+                                        android:hint="@string/acc_info_not_set"
+                                        android:text="******" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:background="@mipmap/ic_arrow_right" />
+                                </RelativeLayout>
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <View
+                                android:id="@+id/rl_pwd_line"
+                                style="@style/h_line" />
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/rl_pay_pwd"
+                                style="@style/rl_account">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="@dimen/dp_48">
+
+                                    <TextView
+                                        android:id="@+id/tv_pay_word"
+                                        style="@style/tv_account_name"
+                                        android:text="@string/acc_info_payword" />
+
+                                    <EditText
+                                        android:id="@+id/tv_pay_pwd"
+                                        style="@style/et_account"
+                                        android:layout_toRightOf="@+id/tv_pay_word"
+                                        android:fontFamily="sans-serif"
+                                        android:hint="@string/acc_info_not_set"
+                                        android:text="******" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:background="@mipmap/ic_arrow_right" />
+
+                                </RelativeLayout>
+                            </com.balysv.materialripple.MaterialRippleLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</RelativeLayout>

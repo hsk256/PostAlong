@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7"
+    android:visibility="visible">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_toolbar">
+
+        <!-- 顶部状态栏：提示正在审核 -->
+        <LinearLayout
+            android:id="@+id/rl_attention"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center"
+            android:background="#fffff3e5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_notify"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_notify" />
+
+                <TextView
+                    android:id="@+id/tv_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_notify"
+                    android:gravity="center_vertical"
+                    android:text="@string/apply_deliver_f_info_verifying"
+                    android:textColor="#ffeb9029" />
+            </LinearLayout>
+
+            <View
+                style="@style/h_line"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+
+        <!--滚动窗口内容部分-->
+        <ScrollView
+            android:id="@+id/scroll_view_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_bottom_btn"
+            android:layout_below="@+id/rl_attention"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="@string/apply_deliver_basic_info"
+                        android:textColor="@color/gray_light"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@drawable/bg_tl_choose_address"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_first_name" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_first_name"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_hint_first_name"
+                                android:maxLength="@integer/first_name_max" />
+
+                            <RelativeLayout
+                                android:id="@+id/ll_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/dp_10"
+                                android:layout_toLeftOf="@+id/et_first_name"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_gender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/icon_male" />
+
+                                <TextView
+                                    android:id="@+id/tv_gender"
+                                    android:layout_width="@dimen/dp_50"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:text="@string/gender_male" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_lastname" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_family_name"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_f_hint_family_name"
+                                android:maxLength="@integer/family_name_max" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rl_sex"
+                            style="@style/ripple_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_36"
+                                    android:layout_height="@dimen/dp_36"
+                                    android:layout_marginLeft="@dimen/dp_4"
+                                    android:src="@mipmap/icon_gender" />
+
+                                <TextView
+                                    android:id="@+id/et_sex"
+                                    style="@style/et_common_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_8"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/apply_deliver_f_hint_gender"
+                                    android:minHeight="@dimen/dp_48" />
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rl_nation"
+                            style="@style/ripple_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_36"
+                                    android:layout_height="@dimen/dp_36"
+                                    android:layout_marginLeft="@dimen/dp_4"
+                                    android:src="@mipmap/icon_nationality" />
+
+                                <TextView
+                                    android:id="@+id/et_nationality"
+                                    style="@style/et_common_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_8"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/apply_deliver_f_hint_nationality"
+                                    android:minHeight="@dimen/dp_48" />
+
+                            </LinearLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_place_resident" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_address"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_f_hint_place_of_resident"
+                                android:maxLength="@integer/settle_address_max" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_emergency"
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_emergency" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_arm_user"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_8"
+                                android:layout_toLeftOf="@+id/iv_select_arm_user"
+                                android:layout_toRightOf="@+id/iv_emergency"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_f_emergency_contact"
+                                android:inputType="text"
+                                android:maxLength="@integer/first_and_last_name_max" />
+
+                            <ImageView
+                                android:id="@+id/iv_select_arm_user"
+                                style="@style/img_create_order_2"
+                                android:layout_width="@dimen/dp_48"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/btn_common"
+                                android:padding="@dimen/dp_2"
+                                android:src="@mipmap/icon_person" />
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_mobile"
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_phone" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_arm_phone"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:layout_toRightOf="@+id/iv_mobile"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_f_hint_mobile"
+                                android:inputType="phone"
+                                android:maxLength="@integer/phone_max" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_creditCard"
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_credit" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_creditCard"
+                                style="@style/et_common_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:layout_toRightOf="@+id/iv_mobile"
+                                android:background="@null"
+                                android:hint="@string/apply_deliver_f_hint_cre_card"
+                                android:inputType="phone"
+                                android:maxLength="@integer/credit_card_max" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bg_grey_F7F7F7">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:text="@string/apply_deliver_f_cert_info"
+                            android:textColor="@color/gray_light"
+                            android:textSize="@dimen/text_size_18" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@drawable/bg_tl_choose_address"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dp_1"
+                        android:paddingTop="@dimen/dp_1">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rl_cert"
+                            style="@style/ripple_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            app:mrl_rippleBackground="@color/white">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_certification"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_certification"
+                                    android:layout_width="@dimen/dp_36"
+                                    android:layout_height="@dimen/dp_36"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_4"
+                                    android:src="@mipmap/icon_pay_id" />
+
+                                <TextView
+                                    android:id="@+id/tv_id_type"
+                                    style="@style/et_common"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_48"
+                                    android:layout_marginLeft="@dimen/dp_8"
+                                    android:layout_toLeftOf="@+id/iv_down"
+                                    android:layout_toRightOf="@+id/iv_certification"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/apply_deliver_f_cert_auth"
+                                    android:textSize="@dimen/text_size_16" />
+
+                                <ImageView
+                                    android:id="@+id/iv_down"
+                                    android:layout_width="@dimen/dp_36"
+                                    android:layout_height="@dimen/dp_36"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp_4"
+                                    android:src="@mipmap/icon_down" />
+                            </RelativeLayout>
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_certification_number"
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:src="@mipmap/icon_cert_num" />
+
+                            <com.android.publicexpress.ui.widget.EditTextWithDel
+                                android:id="@+id/et_identity"
+                                style="@style/et_common"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_marginRight="@dimen/dp_20"
+                                android:layout_toRightOf="@+id/iv_certification_number"
+                                android:background="@null"
+                                android:clickable="true"
+                                android:hint="@string/apply_deliver_f_hint_input_cert_num"
+                                android:maxLength="@integer/id_card_max"
+                                android:numeric="integer"
+                                android:textSize="@dimen/text_size_16" />
+
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8" />
+
+                        <RelativeLayout
+                            android:id="@+id/ll_buy_insType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_4"
+                            android:layout_marginRight="@dimen/dp_4"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_ins_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_48"
+                                android:checked="true"
+                                android:focusable="false"
+                                android:gravity="center_vertical" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/deliver_agree_left"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp_48"-->
+                            <!--android:layout_toRightOf="@+id/cb_ins_1"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="@string/apply_deliver_agree_agreement"-->
+                            <!--android:textColor="@color/gray"-->
+                            <!--android:textSize="@dimen/text_size_14" />-->
+
+
+                            <!--android:layout_toRightOf="@+id/deliver_agree_left"-->
+
+                            <TextView
+                                android:id="@+id/deliver_agree"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_toRightOf="@+id/cb_ins_1"
+                                android:gravity="center_vertical"
+                                android:text="@string/apply_deliver_agree_agreement"
+                                android:textColor="@drawable/tv_color_underline"
+                                android:textSize="@dimen/text_size_14" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/ll_pic_line"
+                            style="@style/h_line"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8"
+                            android:visibility="gone" />
+
+                        <!-- 申请人的图片栏 -->
+                        <LinearLayout
+                            android:id="@+id/ll_ivgroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_120"
+                            android:padding="@dimen/dp_8"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/iv_photo1"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/dp_8"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/iv_photo2"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/dp_8"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/iv_photo3"
+                                android:layout_width="@dimen/dp_0"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_8" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- 底部按钮部分 -->
+        <LinearLayout
+            android:id="@+id/ll_bottom_btn"
+            style="@style/ll_btn_bottom_common">
+
+            <View style="@style/h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_single_navy_blue">
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    style="@style/tv_btn_bottom_blue_common"
+                    android:text="@string/common_next_step" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

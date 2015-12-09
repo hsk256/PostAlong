@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_common"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="0"
+            android:textColor="@color/main_green_26a65b"
+            android:textSize="@dimen/text_size_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:text="@string/point_current_point"
+            android:textColor="@color/gray_light"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_height="@dimen/dp_12" />
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_payment_record"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="42dp"-->
+    <!--android:paddingLeft="16dp"-->
+    <!--android:background="@drawable/btn_common">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="point records"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:textColor="@color/tv_grey_2" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:src="@mipmap/ic_arrow_right"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="12dp"-->
+    <!--/>-->
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

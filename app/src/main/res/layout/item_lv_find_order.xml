@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:ellipsize="end"
+        android:maxEms="10"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:text="A tractor from monicas"
+        android:textColor="@color/tv_black_1"
+        android:textSize="@dimen/text_size_16" />
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_goods_name"
+        android:layout_below="@+id/tv_goods_name"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toLeftOf="@+id/ll_reward"
+        android:layout_toStartOf="@+id/ll_reward">
+
+        <TextView
+            android:id="@+id/tv_from_name"
+            style="@style/tv_find_order_item_name"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="@string/order_list_from" />
+
+        <TextView
+            android:id="@+id/tv_to_name"
+            style="@style/tv_find_order_item_name"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_from_name"
+            android:text="@string/order_list_to" />
+
+        <TextView
+            android:id="@+id/tv_comment_name"
+            style="@style/tv_find_order_item_name"
+            android:layout_below="@+id/tv_to_name"
+            android:text="@string/order_list_release_time" />
+
+        <TextView
+            android:id="@+id/tv_from_value"
+            style="@style/tv_find_order_item_value"
+            android:layout_alignBaseline="@+id/tv_from_name"
+            android:text="from address" />
+
+        <TextView
+            android:id="@+id/tv_to_value"
+            style="@style/tv_find_order_item_value"
+            android:layout_alignBaseline="@+id/tv_to_name"
+            android:layout_below="@+id/tv_from_value"
+            android:text="to address" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/tv_find_order_item_value"
+            android:layout_alignBaseline="@+id/tv_comment_name"
+            android:layout_below="@+id/tv_to_value"
+            android:text="time" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/v_line"
+        android:layout_height="@dimen/dp_90"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_toLeftOf="@+id/ll_reward" />
+
+    <RelativeLayout
+        android:id="@+id/ll_reward"
+        android:layout_width="@dimen/dp_105"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_reward_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/order_list_reward"
+                    android:textColor="@color/tv_black_1"
+                    android:textSize="@dimen/find_order_tag_reward_size" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_reward_name"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/money_color_d92400"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_weight_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/order_list_weight"
+                    android:textColor="@color/tv_black_1"
+                    android:textSize="@dimen/find_order_tag_reward_size" />
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_reward_name"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0Kg"
+                    android:textColor="@color/status_done_cancel_comment_bargain"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

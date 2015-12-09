@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 我的发单 我的接单 右上角的filter和toolbar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:layout_margin="0dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/main_green_26a65b"
+        android:minHeight="@dimen/dp_48"
+        android:textColor="@android:color/white"
+        android:theme="@style/AppBase.Dark"
+        app:navigationIcon="?attr/homeAsUpIndicator">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_20" />
+
+        <LinearLayout
+            android:id="@+id/ll_action"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_action"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/find_order_filter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_34"
+                android:src="@mipmap/icon_down" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

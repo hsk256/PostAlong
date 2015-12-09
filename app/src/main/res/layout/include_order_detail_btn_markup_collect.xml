@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/get_order_button"
+    style="@style/ll_btn_bottom_common">
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        style="@style/ll_btn_bottom_common_inner"
+        android:orientation="horizontal">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_markup"
+            style="@style/ripple_btn_bottom_double.left">
+
+            <TextView
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/btn_order_mark_up" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_collect"
+            style="@style/ripple_btn_bottom_double.right.blue">
+
+            <TextView
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/btn_order_collect" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</LinearLayout>

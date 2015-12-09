@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_8"
+    android:layout_marginRight="@dimen/dp_8"
+    android:layout_marginTop="@dimen/dp_8"
+    android:background="@drawable/bg_coupon"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/coupon_name"
+        style="@style/tv_wallet"
+        android:text="Coupon"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_20" />
+
+    <TextView
+        android:id="@+id/coupon_use_range"
+        style="@style/tv_coupon"
+        android:layout_below="@+id/coupon_name"
+        android:text="Use it in any service"
+        android:textColor="@color/gray_light"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/coupon_use_date"
+        style="@style/tv_coupon"
+        android:layout_below="@+id/coupon_use_range"
+        android:text="21 Mar 2016"
+        android:textColor="@color/btn_cancel"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/coupon_piece"
+        style="@style/tv_wallet"
+        android:layout_height="@dimen/dp_65"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_8"
+        android:gravity="bottom"
+        android:text="10"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/text_size_36" />
+
+    <TextView
+        android:id="@+id/coupon_danwei"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_65"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_toLeftOf="@+id/coupon_piece"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/dp_6"
+        android:text="$"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/text_size_18" />
+</RelativeLayout>

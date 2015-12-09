@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_edit_resend_button"
+    style="@style/ll_btn_bottom_common"
+    android:visibility="gone">
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        style="@style/ll_btn_bottom_common_inner"
+        android:orientation="horizontal">
+
+        <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_double.left">
+
+            <TextView
+                android:id="@+id/btn_order_edit"
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/common_edit" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_double.right.blue">
+
+            <TextView
+                android:id="@+id/btn_order_resend"
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/btn_order_resend" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</LinearLayout>

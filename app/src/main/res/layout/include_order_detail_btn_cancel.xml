@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_btn_cancel"
+    android:visibility="gone"
+    style="@style/ll_btn_bottom_common">
+
+    <View style="@style/h_line" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btn_cancel"
+        style="@style/ripple_btn_bottom_single_red">
+
+        <TextView
+            android:id="@+id/tv_btn_cancel"
+            style="@style/tv_btn_bottom_red"
+            android:text="@string/common_cancel" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

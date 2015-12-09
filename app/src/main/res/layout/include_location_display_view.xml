@@ -1,0 +1,74 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tl_address_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll_toolbar"
+    android:layout_margin="@dimen/dp_8"
+    android:background="@drawable/bg_tl_choose_address"
+    android:stretchColumns="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_4"
+            android:src="@mipmap/icon_search" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            style="@style/ripple_create_trip"
+            app:mrl_rippleDelayClick="true">
+
+            <EditText
+                android:id="@+id/address_location"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_8"
+                android:background="@null"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/choose_addr_hint_search"
+                android:minHeight="@dimen/dp_48"
+                android:singleLine="false"
+                android:textSize="@dimen/text_size_16" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8" />
+
+    <LinearLayout
+        android:id="@+id/ll_address_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/dp_26"
+            android:layout_height="@dimen/dp_26"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_14"
+            android:src="@mipmap/icon_address_detail" />
+
+            <EditText
+                android:id="@+id/address_detail"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_8"
+                android:background="@null"
+                android:hint="@string/choose_addr_hint_detail_addr"
+                android:minHeight="@dimen/dp_48"
+                android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</TableLayout>

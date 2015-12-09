@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_toolbar"
+        android:orientation="vertical">
+
+        <View
+            style="@style/h_line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前安装有：" />
+
+            <TextView
+                android:id="@+id/tv_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="校园服务器"
+                android:textColor="#098d17" />
+
+        </LinearLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_custom"
+            android:layout_marginTop="@dimen/dp_10"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="点此自定义输入" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+    </LinearLayout>
+</RelativeLayout>

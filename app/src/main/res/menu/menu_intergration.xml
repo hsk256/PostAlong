@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.android.publicexpress.ui.activity.wallet.PointActivity">
+    <item
+        android:id="@+id/action_rule"
+        android:orderInCategory="100"
+        android:title="Rule"
+        app:showAsAction="always" />
+</menu>

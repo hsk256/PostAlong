@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/order_info"
+            style="@style/et_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="top|start"
+            android:hint="@string/create_order_c_input_comment"
+            android:minLines="5"
+            android:padding="@dimen/dp_16"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_words"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="right"
+            android:paddingRight="@dimen/dp_8"
+            android:text="@string/common_tip_input_words"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/tv_name"/>
+
+        <View
+            style="@style/h_line"
+            android:layout_height="@dimen/dp_8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="left"
+            android:paddingBottom="@dimen/dp_16"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_8"
+            android:text="@string/create_order_c_tag_title"
+            android:textSize="@dimen/text_size_18" />
+
+        <com.android.publicexpress.ui.widget.FlowLayout
+            android:id="@+id/flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:background="#fff"
+            android:paddingLeft="@dimen/dp_16" />
+
+        <!--<View-->
+            <!--style="@style/h_line"-->
+            <!--android:layout_marginTop="@dimen/dp_8" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#fff"-->
+            <!--android:paddingLeft="@dimen/dp_16"-->
+            <!--android:paddingTop="@dimen/dp_8"-->
+            <!--android:text="@string/create_order_c_remark"-->
+            <!--android:textSize="@dimen/text_size_18" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#fff"-->
+            <!--android:paddingLeft="@dimen/dp_16"-->
+            <!--android:paddingTop="@dimen/dp_8"-->
+            <!--android:text="@string/create_order_c_remark_content"-->
+            <!--android:textColor="@color/gray_light"-->
+            <!--android:textSize="@dimen/dp_16" />-->
+    </LinearLayout>
+
+    <!--<LinearLayout style="@style/ll_btn_bottom_common">-->
+
+        <!--<View style="@style/h_line" />-->
+
+        <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/btn_ok"-->
+            <!--style="@style/ripple_btn_bottom_single_navy_blue">-->
+
+            <!--<TextView-->
+                <!--style="@style/tv_btn_bottom_blue_common"-->
+                <!--android:text="@string/common_ok" />-->
+        <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+    <!--</LinearLayout>-->
+</RelativeLayout>

@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <ScrollView
+        android:id="@+id/sl_create_order_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_marginBottom="@dimen/dp_62"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_create_order_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/div_margin_left_right"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_14">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/div_margin_left_right"
+                android:layout_marginRight="@dimen/div_margin_left_right"
+                android:background="@drawable/bg_wrap_border"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/ll_create_order_1">
+
+                    <ImageView
+                        style="@style/img_create_order_1"
+                        android:src="@mipmap/icon_good" />
+
+                    <com.android.publicexpress.ui.widget.EditTextWithDel
+                        android:id="@+id/et_send_goods_name"
+                        style="@style/et_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_marginBottom="@dimen/dp_9"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:background="@null"
+                        android:hint="@string/create_order_1_name"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <View
+                    style="@style/h_line"
+                    android:layout_width="wrap_content" />
+
+                <LinearLayout style="@style/ll_create_order_1">
+
+                    <ImageView
+                        style="@style/img_create_order_1"
+                        android:src="@mipmap/icon_weight" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48">
+
+                        <com.android.publicexpress.ui.widget.EditTextWithDel
+                            android:id="@+id/et_send_goods_weight"
+                            style="@style/et_create_order_2_1"
+                            android:layout_toLeftOf="@+id/tv_goods_change_kg"
+                            android:hint="@string/create_order_1_weight"
+                            android:inputType="number"
+                            android:maxLines="6" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_change_kg"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="-5dp"
+                            android:gravity="center"
+                            android:text="kg"
+                            android:textColor="@color/tv_name"
+                            android:textSize="@dimen/text_size_15" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View style="@style/h_line" />
+
+                <LinearLayout
+                    style="@style/ll_create_order_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/img_create_order_1"
+                        android:src="@mipmap/icon_value" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_48">
+
+                        <com.android.publicexpress.ui.widget.EditTextWithDel
+                            android:id="@+id/et_send_goods_value"
+                            style="@style/et_create_order_2_1"
+                            android:layout_toLeftOf="@+id/create_order_$"
+                            android:hint="@string/create_order_1_value"
+                            android:inputType="numberDecimal" />
+
+                        <TextView
+                            android:id="@+id/create_order_$"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:drawablePadding="-5dp"
+                            android:gravity="center"
+                            android:text="$"
+                            android:textColor="@color/tv_name"
+                            android:textSize="@dimen/text_size_15" />
+                        <!--<ImageView-->
+                            <!--android:id="@+id/create_order_$"-->
+                            <!--android:layout_width="@dimen/dp_50"-->
+                            <!--android:layout_height="@dimen/dp_50"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:gravity="center"-->
+                            <!--android:src="@mipmap/ic_dollar" />-->
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/h_line" />
+
+                <LinearLayout
+                    style="@style/ll_create_order_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/img_create_order_1"
+                        android:src="@mipmap/icon_comment" />
+
+                    <RelativeLayout
+                        android:id="@+id/tr_good_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dp_48">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/ripple_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/create_order_arrow"
+                            android:minHeight="@dimen/dp_48"
+                            app:mrl_rippleDelayClick="true">
+
+                            <EditText
+                                android:id="@+id/tv_goods_comment"
+                                style="@style/et_create_order_select.ripple"
+                                android:ellipsize="end"
+                                android:hint="@string/create_order_1_comment" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <ImageView
+                            android:id="@+id/create_order_arrow"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/ic_arrow_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/div_margin_left_right"
+                android:layout_marginRight="@dimen/div_margin_left_right"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_wrap_border"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_13"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:layout_marginStart="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:columnWidth="@dimen/dp_18"
+                    android:gravity="center"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_14"
+                    android:paddingTop="@dimen/dp_14"
+                    android:text="@string/create_order_1_photo_tips"
+                    android:textColor="@color/main_green_26a65b"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_buy_insType"
+                style="@style/ll_create_order_2.select"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_wrap_border">
+
+                <CheckBox
+                    android:id="@+id/cb_ins_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_order_2_insurance_text"
+                    android:textColor="@color/tv_name"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/ll_create_order_2.select"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_wrap_border">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/platform_services_rule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_order_2_platform_rule_text"
+                    android:textColor="@color/tv_name"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_btn_bottom"
+        style="@style/ll_btn_bottom_common">
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_release_order_good"
+            style="@style/ripple_btn_bottom_single_navy_blue">
+
+            <TextView
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/create_order_2_btn_release" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</RelativeLayout>

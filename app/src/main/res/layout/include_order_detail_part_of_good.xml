@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_detail_desc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_4"
+            android:paddingLeft="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:text="@string/order_detail_title_good"
+            android:background="@color/gray_order_title"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+    <RelativeLayout
+        style="@style/ll_rl_order_detail"
+        android:paddingRight="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tv_name_name"
+            style="@style/tv_order_detail_name"
+            android:text="@string/order_detail_good_name" />
+
+        <TextView
+            android:id="@+id/tv_name_value"
+            style="@style/tv_order_detail_value"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_toLeftOf="@+id/tv_good_order_status"
+            android:layout_toRightOf="@+id/tv_name_name"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/dp_48"
+            android:text=""
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_good_order_status"
+            style="@style/tv_order_detail_value"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="status"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:orientation="horizontal">
+
+        <RelativeLayout style="@style/ll_rl_order_detail_double_h">
+
+            <TextView
+                android:id="@+id/tv_reward_name"
+                style="@style/tv_order_detail_name"
+                android:text="@string/order_detail_reward" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@+id/tv_reward_name"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_reward_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="$ 0.00"
+                    android:textColor="@color/money_color_d92400"
+                    android:textSize="@dimen/text_size_18" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_reward_not_paid"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tv_reward_value"-->
+                <!--android:text="not paid"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/tv_name"/>-->
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View style="@style/v_line" />
+
+        <RelativeLayout style="@style/ll_rl_order_detail_double_h">
+
+            <TextView
+                android:id="@+id/tv_weight_name"
+                style="@style/tv_order_detail_name"
+                android:text="@string/order_detail_weight" />
+
+            <TextView
+                android:id="@+id/tv_weight_value"
+                style="@style/tv_order_detail_value"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/tv_weight_name"
+                android:text="0 KG"
+                android:textSize="@dimen/text_size_16" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View style="@style/h_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_20">
+
+        <TextView
+            style="@style/tv_order_detail_name"
+            android:text="@string/order_detail_value" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/tv_order_detail_address_value"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:text="0" />
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_48"
+        android:paddingLeft="@dimen/dp_20">
+
+        <TextView
+            style="@style/tv_order_detail_name"
+            android:text="@string/order_detail_desc" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/tv_order_detail_address_value"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:text="" />
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <GridView
+        android:id="@+id/gv_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:numColumns="4" />
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_40" />
+
+</LinearLayout>

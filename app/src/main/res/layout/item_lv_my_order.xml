@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/it_left_border_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_ll_border_order_status_done_cancel_comment_bargain">
+    <!--<View-->
+    <!--android:id="@+id/it_left_border_color"-->
+    <!--android:layout_width="5dp"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:background="@color/tv_btn_light_green"-->
+    <!--android:layout_height="125dp" />-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:text="Good name"
+            android:textColor="@color/tv_black_1"
+            android:textSize="@dimen/text_size_16" />
+
+        <RelativeLayout
+            android:id="@+id/rl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_goods_name"
+            android:layout_alignStart="@+id/tv_goods_name"
+            android:layout_below="@+id/tv_goods_name"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@null">
+
+            <TextView
+                android:id="@+id/tv_to_name"
+                style="@style/tv_find_order_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/order_list_from" />
+
+            <TextView
+                android:id="@+id/tv_comment_name"
+                style="@style/tv_find_order_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_to_name"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/order_list_to" />
+
+            <TextView
+                android:id="@+id/tv_time_name"
+                style="@style/tv_find_order_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_comment_name"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/order_list_deadline" />
+
+            <TextView
+                android:id="@+id/tv_from_value"
+                style="@style/tv_find_order_item_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_to_name"
+                android:layout_marginLeft="@dimen/dp_65"
+                android:ellipsize="end"
+                android:maxEms="7"
+                android:singleLine="true"
+                android:text="from address" />
+
+            <TextView
+                android:id="@+id/tv_to_value"
+                style="@style/tv_find_order_item_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_comment_name"
+                android:layout_below="@+id/tv_from_value"
+                android:layout_marginLeft="@dimen/dp_65"
+                android:ellipsize="end"
+                android:maxEms="7"
+                android:singleLine="true"
+                android:text="to address" />
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_time_name"
+                android:layout_below="@+id/tv_to_value"
+                android:layout_marginLeft="@dimen/dp_65"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:text="18:07 20-06-2015"
+                android:textColor="@color/status_wait_pay"
+                android:textSize="@dimen/find_order_tag_name_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/v_line"
+                style="@style/v_line"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_95"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_right" />
+
+            <LinearLayout
+                android:id="@+id/ll_right"
+                android:layout_width="@dimen/dp_95"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="published"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_reward_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/order_list_reward"
+                    android:textColor="@color/tv_value"
+                    android:textSize="@dimen/find_order_tag_reward_size" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/money_color_d92400"
+                    android:textSize="@dimen/text_size_20" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

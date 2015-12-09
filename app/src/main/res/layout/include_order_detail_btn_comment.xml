@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_comment"
+    style="@style/ll_btn_bottom_common"
+    android:visibility="gone">
+
+    <View style="@style/h_line" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/btn_ok"
+        style="@style/ripple_btn_bottom_single_navy_blue">
+
+        <TextView
+            android:id="@+id/btn_comment"
+            style="@style/tv_btn_bottom_blue_common"
+            android:text="@string/btn_order_comment" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

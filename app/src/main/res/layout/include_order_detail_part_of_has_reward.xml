@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_has_reward_notify"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_49"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/rv_has_reward_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/order_detail_tip_you_have_mark_up"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/main_green_26a65b" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

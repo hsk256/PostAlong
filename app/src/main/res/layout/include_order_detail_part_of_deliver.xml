@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_detail_header"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:visibility="gone">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_4"
+                android:paddingLeft="@dimen/dp_16"
+                android:text="@string/order_detail_title_deliver"
+                android:background="@color/gray_order_title"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_width="match_parent">
+            <!--头像-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/head_photo"
+                android:layout_width="@dimen/dp_84"
+                android:layout_height="@dimen/dp_84"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_default_head"
+                app:border_color="@color/head_pic_border"
+                app:border_width="@dimen/text_size_2" />
+
+            <!--个人信息栏-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/head_photo"
+                android:layout_toLeftOf="@+id/ll_deliver_contact">
+
+                <RelativeLayout
+                    android:id="@+id/ll_head_title"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_head_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="15"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:singleLine="true"
+                        android:text="@string/order_detail_deliver_name"
+                        android:textColor="@color/tv_value"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <ImageView
+                        android:id="@+id/iv_rank"
+                        android:layout_width="@dimen/dp_36"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_below="@id/tv_head_title"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:src="@mipmap/icon_cup" />
+
+                    <TextView
+                        android:id="@+id/tv_rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_head_title"
+                        android:layout_marginTop="@dimen/dp_14"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/iv_rank"
+                        android:text="rank"
+                        android:textColor="@color/gray_light"
+                        android:textSize="@dimen/text_size_14" />
+                </RelativeLayout>
+
+                <!--联系方式栏-->
+                <LinearLayout
+                    android:id="@+id/ll_deliver_contact"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/im_deliver_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_3"
+                        android:src="@mipmap/icon_sms" />
+
+                    <ImageView
+                        android:id="@+id/im_deliver_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="@dimen/dp_3"
+                        android:src="@mipmap/icon_phone_order_detail" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10">
+    </LinearLayout>
+</RelativeLayout>

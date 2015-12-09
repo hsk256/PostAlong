@@ -1,4 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--应用级别部分-->
     <string name="app_name">PostAlong</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name_version">PostAlong v1.0</string>
+    <string name="app_index_SEND">SEND</string>
+    <string name="app_index_ORDER">ORDER</string>
+    <string name="app_index_DELIVER">DELIVER</string>
+    <string name="app_index_TRIP">TRIP</string>
+    <string name="app_index_WALLET">WALLET</string>
+
+    <!--积分头衔-->
+    <string name="p_title_shibing">士兵</string>
+    <string name="p_title_junshi">军士</string>
+    <string name="p_title_shaowei">少尉</string>
+    <string name="p_title_zhongwei">中尉</string>
+    <string name="p_title_shangwei">上尉</string>
+    <string name="p_title_shaoxiao">少校</string>
+    <string name="p_title_zhongxiao">中校</string>
+
+    <!--订单列表状态-->
+    <string name="order_bargain">Bargaining</string>
+    <string name="order_waiting_payment">Payment</string>
+    <string name="order_be_being">In order</string>
+    <string name="order_not_take_goods">claim goods</string>
+    <string name="order_take_goods">Take goods</string>
+    <string name="order_not_sign">Not sign</string>
+    <string name="order_no_evaluation">No evaluation</string>
+    <string name="order_completed">Completed</string>
+    <string name="order_cancel">Cancel</string>
+    <string name="order_none">none</string>
+
+    <string name="order_bargain_time">bargain</string>
+    <string name="order_receive_time">receive</string>
+    <string name="order_release_time">release</string>
+    <string name="order_pay_time">pay</string>
+    <string name="order_get_time">get</string>
+    <string name="order_sign_in_time">sign in</string>
+    <string name="order_comment_time">comment</string>
+    <string name="order_cancel_time">cancel</string>
+    <string name="order_none_time">none</string>
+
+    <!--评论信息提示-->
+    <string name="coment_tip_repeat">You have comments, can\'t comment again</string>
+    <string name="coment_tip_error">I\'m sorry, but comments failed!</string>
+    <string name="coment_tip_success">Congratulations, comment on success!</string>
+    <string name="coment_tip_empty">Fill in the comments information!</string>
+
+    <!--公共部分-->
+    <string name="common_next_step">Next Step</string>
+    <string name="common_submit">submit</string>
+    <string name="common_edit">edit</string>
+    <string name="common_remove">remove</string>
+    <string name="common_ok">Ok</string>
+    <string name="common_later">Later</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_save_success">Save success</string>
+    <string name="common_save_fail">Save fail</string>
+    <string name="common_location_tip">Unable to get the current location information, whether to try again?</string>
+    <string name="common_order_payment">Order payment</string>
+    <string name="common_order_payment_money">Please enter the amount</string>
+    <string name="common_order_payment_money_format">Please input the correct value of money</string>
+    <string name="common_tip_format_error">After the request data format is wrong, please make sure the operation</string>
+    <string name="common_tip_system_error">System error, please try again later</string>
+    <string name="common_tip_system_busy">System is busy, please try again later</string>
+    <string name="common_tip_no_data">Sorry, no data now</string>
+    <string name="common_tip_no_more_data">No more data</string>
+    <string name="common_tip_order_validation">The order in the validation</string>
+    <string name="common_tip_no_network">Not connected to the Internet, please visit again after connection</string>
+    <string name="common_tip_network_timeout">Dear users, the network connection timeout, please check whether the network is available</string>
+    <string name="common_tip_press_again_exit">Again according to exit the program</string>
+    <string name="common_tip_title">Prompt</string>
+    <string name="common_tip_loading">loading…</string>
+    <string name="common_tip_uploading">Are uploading</string>
+    <string name="common_tip_already_submit">You have submitted</string>
+    <string name="common_tip_submit">Is submitted</string>
+    <string name="common_tip_draft_save_fail">The draft order save failed！</string>
+    <string name="common_tip_draft_save_success">The draft order is saved successfully！</string>
+    <string name="common_tip_input_words">can accommodate %d words</string>
+    <string name="common_tip_submiting">Under submission!</string>
+    <string name="common_tip_sorry">Sorry</string>
+    <string name="common_tip_back_to_previous">返回上一页</string>
+    <string name="login_password_error">Password error, please enter again</string>
+    <string name="common_dialog_warning">Warning</string>
+    <string name="common_dialog_warning_prompt">Warm prompt</string>
+    <string name="common_dialog_warning_content">Please wait, is processing</string>
+    <string name="common_tip_login_first">please login first!</string>
+    <string name="common_tip_network_error">I\'m sorry, the network error, please check the network</string>
+    <string name="common_dialog_phone_tip">Determine the dial?</string>
+    <string name="common_dialog_msg_tip">Sure send messages?</string>
+    <string name="common_dialog_unable_open_tip">Unable to open the phone interface</string>
+    <string name="common_dialog_unable_open_msg_tip">Unable to open the message interface</string>
+
+
+    <!--新消息提示-->
+    <string name="new_message_tip">Dear customer, you have a new message!</string>
+    <string name="activity_message_tip">activity message</string>
+    <string name="system_message_tip">system message</string>
+    <string name="private_letter_tip">private message</string>
+    <string name="order_message_tip">order message</string>
+    <string name="message_delete_tip">Are you sure to delete this message!</string>
+
+    <!--当前版本：-->
+    <string name="current_version">current version:</string>
+
+
+    <string name="preview_picture_tip">Preview picture</string>
+    <string name="picture_tip">Picture</string>
+    <string name="picture_delete_tip">Delete picture</string>
+    <string name="picture_delete_confirm_tip">Sure you want to delete this image?</string>
+    <string name="picture_not_support_image">Can\'t support image</string>
+    <string name="picture_limit_tip">Can only choose at most</string>
+    <string name="picture_limit_unit_tip">spread</string>
+    <string name="picture_confirm_tip">Confirm</string>
+    <string name="preview_picture_confirm_tip">Preview</string>
+    <string name="complete_picture_confirm_tip">Complete</string>
+    <string name="all_picture">All images</string>
+
+    <!--评论好坏提示-->
+    <string name="comment_bad">bad</string>
+    <string name="comment_general">general</string>
+    <string name="comment_satisfaction">satisfaction</string>
+    <string name="comment_very">very</string>
+    <string name="comment_very_well">very well</string>
+
+    <!--定位服务-->
+    <string name="location_service">Position location services</string>
+    <string name="location_service_tip">You currently don\'t open the GPS, open to program to obtain a more accurate position?</string>
+    <string name="location_service_no_tip">Unable to get the current location information, please try again!</string>
+    <string name="location_service_current_no_tip">The current center address is unavailable</string>
+
+    <!--下载相关-->
+    <string name="download_fail">download failed</string>
+    <string name="download_success">download success</string>
+    <string name="download_cancel">you have canceled</string>
+    <string name="version_is_up_to_date">您使用的已经是最新版</string>
+
+    <!--公共按钮显示-->
+    <string name="common_btn_back_to_main">index</string>
+    <string name="common_btn_view_order">detail</string>
+    <string name="common_btn_call_him">call him</string>
+    <string name="common_btn_view_withdraw">withdraw</string>
+    <string name="common_lack_withdraw">Lack of balance</string>
+    <string name="common_btn_recharge">recharge</string>
+
+    <!--按钮部分-->
+    <string name="btn_order_mark_up">mark up</string>
+    <string name="btn_order_collect">collect</string>
+
+    <!--toolBar部分-->
+    <string name="action_settings">settings</string>
+    <string name="action_message">message</string>
+    <string name="action_delete">delete</string>
+
+    <!--性别部分-->
+    <string name="gender_male">male</string>
+    <string name="gender_female">female</string>
+
+    <!--订单状态-->
+    <string name="order_status_release">release</string>
+    <string name="order_status_bargain">bargain</string>
+    <string name="order_status_not_pay">not pay</string>
+    <string name="order_status_pay">pay</string>
+    <string name="order_status_pickup">pick up</string>
+    <string name="order_status_transport">transport</string>
+    <string name="order_status_not_comment">not comment</string>
+    <string name="order_status_comment">comment</string>
+    <string name="order_status_cancel">cancel</string>
+    <string name="order_status_success">success</string>
+
+    <string name="tv_register_account"><u>register an account</u></string>
+    <string name="tv_forget_pwd"><u>forget the password</u></string>
+    <string name="drawer_open">Open the drawer</string>
+    <string name="drawer_close">Close the drawer</string>
+
+    <string name="demo_min_label">Min</string>
+    <string name="demo_max_label">Max</string>
+
+    <!--关于我们界面-->
+    <string name="setting_version">version updating</string>
+    <string name="setting_welcome"> welcome page</string>
+    <string name="setting_telephone">contact number</string>
+    <string name="setting_website">official website</string>
+    <string name="setting_wechat">WeChat</string>
+    <string name="setting_weibo">microblog</string>
+    <string name="setting_service_phone">Customer Service Phone</string>
+    <string name="setting_phone_number">400-000-0000</string>
+    <string name="setting_click_to_update">click to update</string>
+    <string name="setting_new_version">The latest version</string>
+
+    <!--设置页面-->
+    <string name="setting_tips_dialog_cache">Whether to clear the cache</string>
+    <string name="setting_tips_quit_dialog_title">Exit the system prompt</string>
+    <string name="setting_tips_toast_quit_ok">Exit the success</string>
+    <string name="setting_tips_toast_cache">Clear the cache success</string>
+    <string name="setting_tips_quit_dialog_content">Pro, are you sure you log out?</string>
+    <string name="setting_label_sound">Sound</string>
+    <string name="setting_label_vibrate">Vibrate</string>
+    <string name="setting_label_push_message">Push message</string>
+    <string name="setting_label_cache">Clear cache</string>
+    <string name="setting_label_about">About zthd</string>
+    <string name="setting_btn_logout">Log out</string>
+
+    <!--Activity名字相关-->
+    <string name="title_activity_forget_pwd">Forget Password</string>
+    <string name="title_activity_create_order">Create Order</string>
+    <string name="title_activity_reset_pwd">Reset Password</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_contact_service">Suggestion Feedback</string>
+    <string name="title_activity_pay">Pay</string>
+    <string name="title_activity_recharge">Recharge</string>
+    <string name="title_activity_create_plan">Release Schedule</string>
+    <string name="title_activity_choose_address">Choose Address</string>
+    <string name="title_activity_pay_success">Pay Success</string>
+    <string name="title_activity_recharge_success">Recharge Success</string>
+    <string name="title_activity_recharge_fail">Recharge fail</string>
+    <string name="title_activity_choose_deliver_success_activity">Choose Success</string>
+    <string name="title_activity_search_address">Search Address</string>
+    <string name="title_activity_withdraw_success">Withdraw Success</string>
+
+    <string name="title_activity_apply_deliverer">Apply deliverer</string>
+    <string name="title_activity_apply_deliverer_back">Back</string>
+    <string name="title_activity_find_pwd">Find password</string>
+    <string name="title_activity_login">Sign In</string>
+    <string name="title_activity_register">Sign Up</string>
+    <string name="title_activity_bargain_list">Bargain list</string>
+    <string name="title_activity_order_detail">Order detail</string>
+    <string name="title_activity_person_center">Person center</string>
+    <string name="title_activity_person_info">Person info</string>
+    <string name="title_activity_pay_password">Pay password</string>
+    <string name="title_activity_message">Message</string>
+    <string name="title_activity_order_tracker">Order tracker</string>
+    <string name="title_activity_comment">Comment</string>
+    <string name="title_activity_find">Find</string>
+    <string name="title_activity_drafts">Drafts</string>
+    <string name="title_activity_search_condition">Search condition</string>
+    <string name="title_activity_trip_plan">Trip plan</string>
+    <string name="title_activity_success">Success</string>
+    <string name="title_activity_order_cancel_reason">Cancel reason</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_wallet">Wallet</string>
+    <string name="title_activity_bind_paypal">Bind paypal</string>
+    <string name="title_activity_coupon">Coupon</string>
+    <string name="title_activity_point">Point</string>
+    <string name="title_activity_withdraw">Withdraw</string>
+    <string name="title_activity_pay_detail">Pay Detail</string>
+
+    <string name="bind_paypal_success">Congratulations, Paypal account successfully.</string>
+    <string name="bind_paypal_fail">I\'m sorry, Paypal account failed!</string>
+    <string name="bind_paypal_name">please input your name.</string>
+    <string name="bind_paypal_account">please input your paypal account.</string>
+
+    <!--date time pickview相关 -->
+    <string name="pickerview_year">year</string>
+    <string name="pickerview_month">mon</string>
+    <string name="pickerview_day">day</string>
+    <string name="pickerview_hours">hr</string>
+    <string name="pickerview_minutes">min</string>
+
+    <!--菜单栏-->
+    <string name="menu_home_page">home page</string>
+    <string name="menu_my_wallet">my wallet</string>
+    <string name="menu_my_billing_order">my billing order</string>
+    <string name="menu_my_receiving_order">my receiving order</string>
+    <string name="menu_operate_instructions">operate instructions</string>
+    <string name="menu_setting">setting</string>
+    <string name="menu_deliver_application">deliver application</string>
+    <string name="menu_contact_customer_service">Suggestion Feedback</string>
+    <string name="menu_create_plan">my schedule</string>
+    <string name="suggestion_feedback">Please fill in your comments and Suggestions</string>
+
+    <!--菜单栏-->
+    <string name="menu_no_login">please log in first</string>
+    <string name="menu_no_name">please sign in</string>
+    <string name="menu_no_titile">no title</string>
+
+    <!--主界面的按钮-->
+    <string name="main_send">send</string>
+    <string name="main_deliver">deliver</string>
+    <string name="main_trip_plan">trip plan</string>
+    <string name="main_my_order">my order</string>
+    <string name="main_wallet">wallet</string>
+    <string name="main_help">help</string>
+    <string name="main_no_net">没有网络，请开启网络</string>
+
+    <!--创建订单两个界面-->
+    <string name="create_order_1_name">good name</string>
+    <string name="create_order_1_weight">good weight</string>
+    <string name="create_order_1_value">good value</string>
+    <string name="create_order_1_comment">good description</string>
+    <string name="create_order_1_photo_tips">! Please add goods pictures to make the order in more detail</string>
+    <string name="create_order_2_reward">money</string>
+    <string name="create_order_2_reward_input">input money</string>
+    <string name="create_order_2_pickup_time">pickup time</string>
+    <string name="create_order_2_arrival_time">arrival time</string>
+    <string name="create_order_2_pickup_addr">pickup address</string>
+    <string name="create_order_2_receive_addr">receiving address</string>
+    <string name="create_order_2_send_name">sender</string>
+    <string name="create_order_2_send_phone">phone</string>
+    <string name="create_order_2_receiver_name">receiver</string>
+    <string name="create_order_2_receiver_phone">phone</string>
+    <string name="create_order_2_insurance_text">Whether to purchase with the bartender</string>
+
+    <string name="create_order_2_platform_rule_text">Agree to and accept《Platform services using rules》</string>
+    <string name="create_order_2_btn_release">Release</string>
+    <string name="create_order_2_tips_money_not_empty">money not allow empty</string>
+    <string name="create_order_2_tips_pick_time_not_empty">pick time not allow empty</string>
+    <string name="create_order_2_tips_arrival_time_not_empty">arrival time not empty</string>
+    <string name="create_order_2_tips_send_time_first">please select send time first</string>
+    <string name="create_order_2_tips_send_addr_not_empty">send address not empty</string>
+    <string name="create_order_2_tips_receive_addr">receive address</string>
+    <string name="create_order_2_tips_send_name">sender</string>
+    <string name="create_order_2_tips_receiver_phone">phone</string>
+    <string name="create_order_2_tips_receiver_name">receiver</string>
+    <string name="create_order_2_tips_send_phone">phone</string>
+    <string name="create_order_2_tips_can_not_order">You have been limit orders</string>
+    <string name="create_order_2_tips_order_release_fail">Release the order failed</string>
+    <string name="create_order_2_tips_send_phone_invalid">发货人手机号码格式不正确</string>
+    <string name="create_order_2_tips_receive_phone_invalid">签收人手机号码格式不正确</string>
+    <string name="create_order_2_tips_receive_phone_not_empty">签收人电话不能为空</string>
+    <string name="create_order_2_tips_receiver_name_not_empty">签收人不能为空</string>
+    <string name="create_order_2_tips_receiver_phone_not_empty">发货人手机号码不能为空</string>
+    <string name="create_order_2_tips_send_name_not_empty">发货人不能为空</string>
+    <string name="create_order_2_tips_receive_addr_not_empty">签收地址不能为空</string>
+    <string name="create_order_1_tips_name">good name</string>
+    <string name="create_order_c_input_comment">Please enter item description</string>
+    <string name="create_order_c_tag_title">Click on the select item description</string>
+    <string name="create_order_c_remark">Remark</string>
+    <string name="create_order_c_remark_content">must arrive in two days,there are fragile things inside.Do you make it clear?</string>
+    <string name="create_order_a_dialog_draft_save">save</string>
+    <string name="create_order_dialog_draft_content">Save as a draft?</string>
+    <string name="create_order_2_toast_g_name_not_empty">good name not allow empty</string>
+
+    <string name="draft_name">Name</string>
+    <string name="draft_time">Update Time</string>
+
+    <!--选择、搜索地址界面-->
+    <string name="choose_addr_hint_search">click to search address</string>
+    <string name="choose_addr_hint_detail_addr">detail address: street</string>
+    <string name="choose_addr_text_go_to_pin">Loading, Please wait!</string>
+    <string name="choose_addr_toast_no_map">There is something wrong with initialize map</string>
+    <string name="choose_address_no_your_want">The query fails, please try again!</string>
+    <string name="search_addr_hint_district">District</string>
+    <string name="search_addr_hint_search">Enter keyword query address</string>
+    <string name="search_addr_query_not_complete">sorry, query did not complete, please try again</string>
+    <string name="search_addr_list_no_data">There is no data for your search</string>
+    <string name="search_addr_list_hint">Please use Search to search an address</string>
+
+    <!--登录注册界面-->
+    <string name="login_sign_in">Sign In</string>
+    <string name="login_sign_up"><u>Sign up</u></string>
+    <string name="login_click_me"><u>click me</u></string>
+    <string name="login_forget_password">forget password ?</string>
+    <string name="login_password">password</string>
+    <string name="register_pay_password">pay password</string>
+    <string name="login_phone_number">phone number</string>
+    <string name="login_pwd_update_success">Change the password successfully！</string>
+    <string name="login_account_exist">Account already exists</string>
+    <string name="login_code_error">Verification code is not correct</string>
+    <string name="login_account_register">Account has been registered</string>
+    <string name="login_phone_pwd_error">A phone number or password is not correct</string>
+    <string name="login_account_freeze">Account has been frozen</string>
+    <string name="login_try_again_later">Too many times, please try again later.</string>
+    <string name="register_code">code</string>
+    <string name="register_confirm_password">confirm password</string>
+    <string name="register_get_code">get code</string>
+    <string name="register_phone_number_empty">phone number can\'t be empty</string>
+    <string name="register_val_code_empty">calcode can\'t be empty</string>
+    <string name="register_password_empty">password can\'t be empty</string>
+    <string name="register_first_name_empty">first name can\'t be empty</string>
+    <string name="register_family_name_empty">family name can\'t be empty</string>
+    <string name="register_agree_rule">please agree our services rules</string>
+
+    <!--评论信息提示-->
+    <string name="comment_tip_repeat">can\'t comment it again!</string>
+    <string name="comment_tip_error">comment error!</string>
+    <string name="comment_tip_success">comment success!</string>
+
+    <!--个人中心界面-->
+    <string name="acc_info_family_name">family name</string>
+    <string name="acc_info_first_name">first name</string>
+    <string name="acc_info_gender">gender</string>
+    <string name="acc_info_phone">phone</string>
+    <string name="acc_info_pwd">password</string>
+    <string name="acc_info_email">E-mail</string>
+    <string name="acc_info_nationality">nationality</string>
+    <string name="acc_info_credibility">credibility</string>
+    <string name="acc_info_deliver_info">deliver info</string>
+    <string name="acc_info_payword">payword</string>
+    <string name="acc_info_comment">comment</string>
+    <string name="acc_info_upload_head_pic">上传头像</string>
+    <string name="acc_info_upload_head_pic_capture">照相</string>
+    <string name="acc_info_upload_head_pic_from_file">本地照片</string>
+    <string name="acc_info_not_input">not input</string>
+    <string name="acc_info_loading_head_pic">loading new head portrait…</string>
+    <string name="acc_edit_info_error">Modify the information failure</string>
+    <string name="acc_edit_info_success">Modify the information successfully</string>
+    <string name="acc_edit_head_pic_error">Modify the head picture failure</string>
+    <string name="acc_edit_head_pic_success">Modify the head picture successfully</string>
+
+    <!--申请递送人界面-->
+    <string name="apply_deliver_f_info_verifying">Information is under review, please wait</string>
+    <string name="apply_deliver_agree_agreement">Agree to deliver relevant agreement</string>
+    <string name="apply_deliver_agree_title">Agreement</string>
+    <string name="apply_deliver_agree_agreement_tip">Please check the delivery related agreement</string>
+    <string name="back_clean_info">Data have not been submitted, determine the exit?</string>
+    <string name="apply_deliver_basic_info">Basic Information</string>
+    <string name="apply_deliver_hint_first_name">first name</string>
+    <string name="apply_deliver_f_hint_family_name">family name</string>
+    <string name="apply_deliver_f_hint_gender">sex</string>
+    <string name="apply_deliver_f_hint_nationality">nationality</string>
+    <string name="apply_deliver_f_hint_place_of_resident">place of resident</string>
+    <string name="apply_deliver_f_emergency_contact">emergency contact</string>
+    <string name="apply_deliver_f_hint_mobile">mobile</string>
+    <string name="apply_deliver_f_hint_cre_card">credit card</string>
+    <string name="apply_deliver_f_cert_info">Certificate Information</string>
+    <string name="apply_deliver_f_cert_auth">Certificate authentication</string>
+    <string name="apply_deliver_f_hint_input_cert_num">please input certification number</string>
+    <string name="apply_deliver_congratulate_already">Congratulations, you have passed the information audit!</string>
+    <string name="apply_deliver_info_has_benn_submit_wait">Your information has been submitted, please be patient and wait for the audit</string>
+    <string name="apply_deliver_info_submit_repeat">申请正在审核，请勿重复提交申请</string>
+    <string name="apply_deliver_not_pass_retry_input">Your information audit has not passed, please re submit information as required</string>
+    <string name="apply_photo_accord">Please follow these rules to upload id photo</string>
+    <string name="apply_photo_tip_title">Holding Certificate For Obverse</string>
+    <string name="apply_photo_tip_content">[holding certificates nearer to the front of the camera, filming the chest ablve, focus the certificates above fonts and pictures clearly visible]</string>
+    <string name="apply_photo_case">case</string>
+    <string name="apply_photo_according_rule_id_card">According to the following rules to upload photo ID card</string>
+    <string name="apply_photo_according_rule_driving">Please upload a photo of the driver\'s license in accordance with the following rules</string>
+    <string name="apply_photo_according_rule_passport">Please upload your passport photo in accordance with the following rules</string>
+    <!--成功界面的提示-->
+    <string name="success_bargain_title">Negotiation success</string>
+    <string name="success_bargain_content">Your negotiation information has been sent, please wait a moment.</string>
+    <string name="success_collect_title">Grab a single success</string>
+    <string name="success_collect_content">your order has been created, please wait.</string>
+    <string name="success_pay_title">Payment success</string>
+    <string name="success_recharge_title">Recharge success</string>
+    <string name="success_release_order_title">Release success</string>
+    <string name="success_release_order_content">your order has been created, please wait.</string>
+    <string name="success_choose_deliver_title">Choose success</string>
+    <string name="success_choose_deliver_content">your order has been created, please wait.</string>
+
+    <string name="success_withdraw_title">Withdrawal success</string>
+    <string name="click_picture">Click on the image</string>
+    <string name="success_withdraw_content">Dear customer, hello!Withdraw operation has been successful, withdrawal amount is audit process, please be patient.</string>
+
+    <!--优惠券界面-->
+    <string name="coupon_input_code">Input code</string>
+
+    <!--发行程界面-->
+    <string name="create_plan_from">From</string>
+    <string name="create_plan_t0">To</string>
+    <string name="create_plan_by_way_of">By way of</string>
+    <string name="create_plan_start_date">Start Date</string>
+    <string name="create_plan_end_date">End Date</string>
+    <string name="create_plan_hint_start_off">start off</string>
+    <string name="create_plan_hint_destination">destination</string>
+    <string name="create_plan_hint_by_way_of">Seperate address with comma</string>
+    <string name="create_plan_hint_input_time">input time</string>
+    <string name="create_plan_hint_input_description">Please input description</string>
+    <string name="create_plan_start_time">Please select start time</string>
+    <string name="create_plan_end_time">Please select a deadline</string>
+    <string name="create_plan_start_addr_not_empty">起始地址不能为空</string>
+    <string name="create_plan_end_addr_not_empty">目的地址不能为空</string>
+    <string name="create_plan_desc_not_empty">请填写行程描述</string>
+
+    <!--寻找订单列表四个标签-->
+    <string name="find_order_distance">Distance</string>
+    <string name="find_order_latest">Latest</string>
+    <string name="find_order_reward">Reward</string>
+    <string name="find_order_weight">Weight</string>
+    <string name="find_order_filter">filter</string>
+    <string name="find_order_money_not_sufficent">余额不足？</string>
+    <string name="find_order_if_go_to_recharge">金额不足10元，是否前往充值？</string>
+    <string name="find_order_if_collect_title">是否抢单？</string>
+    <string name="find_order_if_collect_content">请问你是否抢单？</string>
+    <string name="find_order_collect_success">亲，恭喜您！抢单成功</string>
+
+    <!--（我的）订单列表的订单四个状态-->
+    <string name="order_list_published">published</string>
+    <string name="order_list_transporting">transporting</string>
+    <string name="order_list_success">success</string>
+    <string name="order_list_cancel">cancel</string>
+    <string name="order_list_all">all order</string>
+
+    <!--订单列表item内容-->
+    <string name="order_list_from">From</string>
+    <string name="order_list_to">To</string>
+    <string name="order_list_deadline">Deadline</string>
+    <string name="order_list_reward">Reward</string>
+    <string name="order_list_release_time">Release</string>
+    <string name="order_list_weight">Weight</string>
+
+    <!--议价列表-->
+    <string name="order_bargain_sure_deliver">Are you sure you choose the delivery man to give you delivery?</string>
+
+    <!--订单详情部分-->
+    <string name="order_detail_good_name">Good Name</string>
+    <string name="order_detail_reward">Reward</string>
+    <string name="order_detail_weight">Weight</string>
+    <string name="order_detail_get_time">Get Time</string>
+    <string name="order_detail_deadline">Deadline</string>
+    <string name="order_detail_sender">Sender</string>
+    <string name="order_detail_attention">Note cannot be empty</string>
+    <string name="order_detail_from">From</string>
+    <string name="order_detail_receive">Receiver</string>
+    <string name="order_detail_to">To</string>
+    <string name="order_detail_value">Value</string>
+    <string name="order_detail_desc">Desc</string>
+    <string name="order_detail_latitude_longitude_empty">the latitude and longitude is empty</string>
+    <string name="order_detail_not_comment">发单人未评价</string>
+    <string name="order_detail_already_comment">发单人已评价</string>
+    <string name="order_detail_already_comment_2">已评价</string>
+    <string name="order_detail_not_get_good">未取货</string>
+    <string name="order_detail_carrying">运送中</string>
+    <string name="order_filter">您确定要清空查询条件吗?</string>
+    <string name="order_filter_prompt">查询条件已清空</string>
+    <string name="order_detail_dialog_cancel_bargain">您确认要取消订单议价吗?</string>
+    <string name="order_detail_dialog_confirm_get_good">您确认取货吗?</string>
+    <string name="order_detail_dialog_resend_code">需要重新发送一次验证码吗?</string>
+    <string name="order_detail_dialog_input_pick_up_code">please input pick up code.</string>
+    <string name="order_detail_dialog_sure_after_pickup_code">Sure after the pickup code.</string>
+    <string name="order_detail_dialog_if_modify_order">您确认要重新修改订单吗?</string>
+    <string name="order_detail_dialog_if_resend_order">您确认要重新发布订单吗?</string>
+    <string name="order_detail_dialog_cancel_order_10">您确认要取消此条订单信息吗?在付款阶段取消订单将会扣除10积分</string>
+    <string name="order_detail_dialog_cancel_order_50">您确认要取消此条订单信息吗?在付款阶段取消订单将会扣除50\%的报酬给递送人</string>
+    <string name="order_detail_dialog_if_cancel_order">您确认要取消此条订单信息吗?</string>
+    <string name="order_detail_dialog_cancel_order_point">您确认要取消此条订单信息吗?取消订单将要扣除积分</string>
+    <string name="order_detail_dialog_cancel_order_loss_money">您确认要取消此条订单信息吗?将会扣除保证金，给发件人</string>
+    <string name="order_detail_can_not_cancel">该状态下不能取消</string>
+    <string name="order_detail_can_not_cancel_has_modified">该状态已经变更不能取消</string>
+    <string name="order_detail_get_good_success">确认取货成功</string>
+    <string name="order_detail_get_good_fail">确认取货失败</string>
+    <string name="order_detail_cancel_success">订单取消成功</string>
+    <string name="order_detail_cancel_fail">订单取消失败</string>
+    <string name="order_detai_send_code_success">取货码已经从新发送成功，请向签收人确认取货码！</string>
+    <string name="order_detai_resend_code_fail">取货码重新发送失败！</string>
+    <string name="order_detail_sign_success">订单签收成功</string>
+    <string name="order_detail_sign_fail">订单签收失败</string>
+    <string name="order_detail_comment_success">订单评价成功</string>
+    <string name="order_detail_comment_fail">订单评价失败</string>
+    <string name="order_detail_resend_success">重新发布订单成功</string>
+    <string name="order_detail_resend_fail">重新发布订单失败</string>
+    <string name="order_detail_cancel_bargain_success">取消议价成功</string>
+    <string name="order_detail_cancel_bargain_fail">取消议价失败</string>
+    <string name="order_detail_order_already_cancel">此单已取消</string>
+    <string name="order_detail_order_complete">订单已完成</string>
+    <string name="order_detail_tip_you_have_mark_up">You have makeup $</string>
+    <string name="order_detail_tip_new_advice_have_not_read">There is a new advice you have not read!</string>
+    <string name="order_detail_deliver_name">name</string>
+    <string name="order_detail_deliver_send">Send number</string>
+    <string name="msg_order_detail_number">Order Number</string>
+    <string name="reason_cancel_1">Not satisfied with the single</string>
+    <string name="reason_cancel_2">Free delivery person long time did not order</string>
+    <string name="reason_cancel_3">Fill in error to send information</string>
+    <string name="reason_cancel_4">Don\'t want to</string>
+    <string name="order_comment_name">Name</string>
+    <string name="order_comment_quality_evaluate">Qualitative evaluation</string>
+    <string name="order_comment_desc_evaluate">Description evaluation</string>
+    <string name="order_comment_hint_desc">please write down your comment about the deliver serving</string>
+    <string name="order_detail_title_deliver">Delivery information</string>
+    <string name="order_detail_title_status">Order status</string>
+    <string name="order_detail_title_address">Address information</string>
+    <string name="order_detail_title_good">Send good information</string>
+
+    <string name="order_btn_has_been_comment">The order was evaluated</string>
+    <string name="order_filter_start_address">Start Address</string>
+    <string name="order_filter_destination_address">Destination Address</string>
+    <string name="order_filter_refresh">reset</string>
+    <string name="order_filter_search">search</string>
+    <!--订单详情的按钮-->
+    <string name="btn_order_resend">resend</string>
+    <string name="btn_order_cancel_bargain">cancel bargain</string>
+    <string name="btn_order_comment">comment</string>
+    <string name="btn_order_pay">pay</string>
+    <string name="btn_order_order_done">order done</string>
+    <string name="btn_order_input_code">input code</string>
+    <string name="btn_order_send_code">send code</string>
+
+    <!--议价窗口-->
+    <string name="dialog_title">Please input the reward ?</string>
+    <string name="dialog_input_markup">Please input the reward you want to be paid on this order.</string>
+    <string name="dialog_markup_origin">origin</string>
+    <string name="dialog_markup_real">real</string>
+
+    <!--支付界面-->
+    <string name="pay_total">Total</string>
+    <string name="pay_order_name">Order</string>
+    <string name="pay_use_coupon">Use Coupon</string>
+    <string name="pay_use_wallet">Use Wallet</string>
+    <string name="pay_use">Use</string>
+    <string name="pay_go_to_paypal_page">go to paypal page</string>
+    <string name="pay_you_have">The wallet balance</string>
+    <string name="pay_left">left</string>
+    <string name="pay_fail">Order to generate failed!Whether to prepaid phone</string>
+    <string name="pay_order_cancel">Dear customer, are you sure to cancel the payment?</string>
+    <string name="recharge_order_num">Recharge order number:</string>
+    <string name="recharge_order_cancel">Recharge operation has been cancelled</string>
+    <string name="paypal_pay_verify">Paypal payment is complete, in order to verify</string>
+    <string name="pay_success">Congratulations, pay for success!</string>
+
+    <!--设置支付密码界面-->
+    <string name="pay_pwd_title_1">Modify the pay password</string>
+    <string name="pay_pwd_please_input_your_pwd">please input your pay password</string>
+    <string name="pay_pwd_old_pwd">please input your old pay password</string>
+    <string name="pay_pwd_hint_pwd">input your new password</string>
+    <string name="pay_pwd_confirm_pwd">please input again</string>
+    <string name="pay_pwd_forget_your_pwd"><u>Forgot Your Password ? Contact clients</u></string>
+    <string name="pay_pwd_not_the_same">the two password is not the same</string>
+    <string name="pay_pwd_repwd_empty">please input password</string>
+    <string name="pay_pwd_old_pwd_incorrect">old password is incorrect</string>
+    <!--<string name="pay_pwd_set_somebody">您正在为\%d账号设置支付密码</string>-->
+
+    <!--选择图片界面-->
+    <string name="photo_pick_select">choose</string>
+    <string name="photo_pick_preview">preview</string>
+
+    <!--积分界面-->
+    <string name="point_current_point">current point</string>
+
+    <!--取现界面-->
+    <string name="withdraw_account">Account</string>
+    <string name="withdraw_your_available_cash">Your Available Cash</string>
+    <string name="withdraw_hint_input_money">please input money</string>
+    <string name="withdraw_way">withdraw way</string>
+    <string name="address_history_title">Commonly used address</string>
+    <string name="address_history_no_history_address">No common address</string>
+    <string name="address_history_tip">You can enter your address and will serve as a commonly used</string>
+    <string name="auth_input_valid_code">Please input this validate code you have receive in phone</string>
+    <string name="auth_hint_input_code">please input code</string>
+
+    <!--密码、支付密码相关-->
+    <string name="pay_word_input_your">please input your payword</string>
+    <string name="pay_word_not_empty">please input payword</string>
+    <string name="password_forget">Pay password manager</string>
+    <string name="password_set_forget"> Hello!Please set your payment password</string>
+    <string name="pay_pwd_title">Please input your payword</string>
+
+    <!--钱包首页-->
+    <string name="wallet_current_money">current money</string>
+    <string name="wallet_gold_point">gold point</string>
+    <string name="wallet_coupon">coupon</string>
+    <string name="dialog_select_gender">Please select your gender</string>
+    <string name="common_tip_is_not_deliver_go_to_apply">Than the current delivery, whether to apply for?</string>
+    <string name="photo_pick_camera">camera</string>
+    <string name="photo_pick_my_photo">my photos</string>
+    <string name="photo_pick_piece">sheet</string>
+
+    <!--钱包详情页面-->
+    <string name="wallet_withdraw">Withdraw</string>
+    <string name="wallet_recharge">Recharge</string>
+    <string name="wallet_recharge_success">Congratulations, recharge success!</string>
+    <string name="wallet_recharge_fail">I\'m sorry, recharge failed!</string>
+
+    <!--使用paypal-->
+    <string name="paypal_use">Use&#160;&#160;</string>
+    <string name="paypal_pay">pay</string>
+    <string name="paypal_pal">pal</string>
+
+    <!--充值界面-->
+    <string name="recharge_account">account</string>
+    <string name="recharge_account_value">account</string>
+    <string name="wallet_available_cash">Your available cash</string>
+    <string name="recharge_money">recharge</string>
+    <string name="recharge_money_value">Please enter the top-up amount</string>
+    <string name="recharge_way">Recharge Way</string>
+    <string name="recharge_way_desc">go to paypal page</string>
+    <string name="recharge_channel_suspended">Channel suspended top-up</string>
+
+    <!--支付详情页面-->
+    <string name="pay_amount">pay amount</string>
+    <string name="order_number">order number</string>
+    <string name="pay_name">name</string>
+    <string name="pay_date">date</string>
+    <string name="withdraw_not_insufficient">Dear user, your balance is insufficient, prepaid phone after payment?</string>
+
+    <!--提现页面账户绑定-->
+    <string name="bind_account_desc">please input your paypal account</string>
+    <string name="bind_username">username</string>
+    <string name="bind_account">account</string>
+    <string name="bind_account_exist">This account has been exist, cannot repeat added</string>
+    <string name="bind_btn">Bind</string>
+    <string name="withdraw_success">Withdrawal success</string>
+    <string name="withdraw_account_delete">Are you sure to delete this account?</string>
+    <string name="withdraw_result">Show the result</string>
+    <string name="suspend_withdrawal_channel">To suspend withdrawal channel</string>
+    <string name="withdraw_now_audit">You have to ask now audit, temporarily can\'t apply for withdrawal</string>
+    <string name="withdraw_not_account">This account does not exist</string>
+    <string name="withdraw_verify_fails">Pay the secret is wrong, please input again</string>
+    <string name="withdraw_not_account_tip">Please select need withdrawal way, such as no binding account, please first binding withdrawal account</string>
+    <string name="pay_pwd_not_tip">please input payword</string>
+    <string name="delete_channel_success">Delete the channel success</string>
+    <string name="delete_channel_fail">Delete the channel fail</string>
+
+    <!--优惠劵-->
+    <string name="coupon_success">For successful</string>
+    <string name="coupon_fail">For fail</string>
+    <string name="coupon_code">Please enter the coupon code</string>
+    <string name="coupon_serial_number">The serial number is not available</string>
+    <string name="coupon_not_use">Coupon is not available</string>
+
+    <!--证件类型-->
+    <string name="cert_id">identity card</string>
+    <string name="cert_drive_licence">driving license</string>
+    <string name="cert_passport">passport</string>
+
+    <!--性别-->
+    <string name="sex_male">male</string>
+    <string name="sex_female">female</string>
+
+    <!--议价界面-->
+    <string name="bargain_reward">money</string>
+    <string name="bargain_send">send</string>
+    <string name="bargain_choose">choose</string>
+    <string name="bargain_select_deliver_success">select deliver sucessfully</string>
+    <string name="bargain_action_illegal">action illegal</string>
+    <string name="bargain_order_already_been_receive">This order has been already received</string>
+
+    <string name="verfiy_error">verify error</string>
+    <string name="create_plan_add_way">add via way</string>
+
+    <!--对话框dialogUtil-->
+    <string name="dialog_input_your_password">Please input your password</string>
+    <string name="dialog_valid_your_identity">需要验证您的身份</string>
+    <string name="dialog_download_ing">downloading...</string>
+    <string name="dialog_downloading">正在下载</string>
+    <string name="dialog_download_need_time">May need some time...</string>
+    <string name="dialog_download_background">后台下载</string>
+    <string name="dialog_download_cancel">取消下载</string>
+    <string name="dialog_version_force_update_title">Sorry</string>
+    <string name="dialog_version_force_update_content">This version is not supported, you must update the software to continue to use</string>
+    <string name="dialog_version_go_now">go now</string>
+    <string name="dialog_version_update_title">新的版本</string>
+    <string name="dialog_version_update_now">update now</string>
+    <string name="dialog_version_not_now">latter</string>
+
+    <!--国籍-->
+    <string name="country_name_AFGHANISTAN">AFGHANISTAN</string>
+    <string name="country_name_ÅLANDISLANDS">ÅLAND ISLANDS</string>
+    <string name="country_name_ALBANIA">ALBANIA</string>
+    <string name="country_name_ALGERIA">ALGERIA</string>
+    <string name="country_name_AMERICANSAMOA">AMERICAN SAMOA</string>
+    <string name="country_name_ANDORRA">ANDORRA</string>
+    <string name="country_name_ANGOLA">ANGOLA</string>
+    <string name="country_name_ANGUILLA">ANGUILLA</string>
+    <string name="country_name_ANTARCTICA">ANTARCTICA</string>
+    <string name="country_name_ANTIGUAANDBARBUDA">ANTIGUA AND BARBUDA</string>
+    <string name="country_name_ARGENTINA">ARGENTINA</string>
+    <string name="country_name_ARMENIA">ARMENIA</string>
+    <string name="country_name_ARUBA">ARUBA</string>
+    <string name="country_name_AUSTRALIA">AUSTRALIA</string>
+    <string name="country_name_AUSTRIA">AUSTRIA</string>
+    <string name="country_name_AZERBAIJAN">AZERBAIJAN</string>
+    <string name="country_name_BAHAMAS">BAHAMAS</string>
+    <string name="country_name_BAHRAIN">BAHRAIN</string>
+    <string name="country_name_BANGLADESH">BANGLADESH</string>
+    <string name="country_name_BARBADOS">BARBADOS</string>
+    <string name="country_name_BELARUS">BELARUS</string>
+    <string name="country_name_BELGIUM">BELGIUM</string>
+    <string name="country_name_BELIZE">BELIZE</string>
+    <string name="country_name_BENIN">BENIN</string>
+    <string name="country_name_BERMUDA">BERMUDA</string>
+    <string name="country_name_BHUTAN">BHUTAN</string>
+    <string name="country_name_BOLIVIAPLURINATIONALSTATEOF">BOLIVIA, PLURINATIONAL STATE OF</string>
+    <string name="country_name_BOSNIAANDHERZEGOVINA">BOSNIA AND HERZEGOVINA</string>
+    <string name="country_name_BOTSWANA">BOTSWANA</string>
+    <string name="country_name_BOUVETISLAND">BOUVET ISLAND</string>
+    <string name="country_name_BRAZIL">BRAZIL</string>
+    <string name="country_name_BRITISHINDIANOCEANTERRITORY">BRITISH INDIAN OCEAN TERRITORY</string>
+    <string name="country_name_BRUNEIDARUSSALAM">BRUNEI DARUSSALAM</string>
+    <string name="country_name_BULGARIA">BULGARIA</string>
+    <string name="country_name_BURKINAFASO">BURKINA FASO</string>
+    <string name="country_name_BURUNDI">BURUNDI</string>
+    <string name="country_name_CAMBODIA">CAMBODIA</string>
+    <string name="country_name_CAMEROON">CAMEROON</string>
+    <string name="country_name_CANADA">CANADA</string>
+    <string name="country_name_CAPEVERDE">CAPE VERDE</string>
+    <string name="country_name_CAYMANISLANDS">CAYMAN ISLANDS</string>
+    <string name="country_name_CENTRALAFRICANREPUBLIC">CENTRAL AFRICAN REPUBLIC</string>
+    <string name="country_name_CHAD">CHAD</string>
+    <string name="country_name_CHILE">CHILE</string>
+    <string name="country_name_CHINA">CHINA</string>
+    <string name="country_name_CHRISTMASISLAND">CHRISTMAS ISLAND</string>
+    <string name="country_name_COCOSKEELINGISLANDS">COCOS (KEELING) ISLANDS</string>
+    <string name="country_name_COLOMBIA">COLOMBIA</string>
+    <string name="country_name_COMOROS">COMOROS</string>
+    <string name="country_name_CONGO">CONGO</string>
+    <string name="country_name_CONGOTHEDEMOCRATICREPUBLICOFTHE">CONGO, THE DEMOCRATIC REPUBLIC OF THE</string>
+    <string name="country_name_COOKISLANDS">COOK ISLANDS</string>
+    <string name="country_name_COSTARICA">COSTA RICA</string>
+    <string name="country_name_COTEDIVOIRE">COTE D\'IVOIRE</string>
+    <string name="country_name_CROATIA">CROATIA</string>
+    <string name="country_name_CUBA">CUBA</string>
+    <string name="country_name_CYPRUS">CYPRUS</string>
+    <string name="country_name_CZECHREPUBLIC">CZECH REPUBLIC</string>
+    <string name="country_name_DENMARK">DENMARK</string>
+    <string name="country_name_DJIBOUTI">DJIBOUTI</string>
+    <string name="country_name_DOMINICA">DOMINICA</string>
+    <string name="country_name_DOMINICANREPUBLIC">DOMINICAN REPUBLIC</string>
+    <string name="country_name_ECUADOR">ECUADOR</string>
+    <string name="country_name_EGYPT">EGYPT</string>
+    <string name="country_name_ELSALVADOR">EL SALVADOR</string>
+    <string name="country_name_EQUATORIALGUINEA">EQUATORIAL GUINEA</string>
+    <string name="country_name_ERITREA">ERITREA</string>
+    <string name="country_name_ESTONIA">ESTONIA</string>
+    <string name="country_name_ETHIOPIA">ETHIOPIA</string>
+    <string name="country_name_FALKLANDISLANDSMALVINAS">FALKLAND ISLANDS (MALVINAS)</string>
+    <string name="country_name_FAROEISLANDS">FAROE ISLANDS</string>
+    <string name="country_name_FIJI">FIJI</string>
+    <string name="country_name_FINLAND">FINLAND</string>
+    <string name="country_name_FRANCE">FRANCE</string>
+    <string name="country_name_FRENCHGUIANA">FRENCH GUIANA</string>
+    <string name="country_name_FRENCHPOLYNESIA">FRENCH POLYNESIA</string>
+    <string name="country_name_FRENCHSOUTHERNTERRITORIES">FRENCH SOUTHERN TERRITORIES</string>
+    <string name="country_name_GABON">GABON</string>
+    <string name="country_name_GAMBIA">GAMBIA</string>
+    <string name="country_name_GEORGIA">GEORGIA</string>
+    <string name="country_name_GERMANY">GERMANY</string>
+    <string name="country_name_GHANA">GHANA</string>
+    <string name="country_name_GIBRALTAR">GIBRALTAR</string>
+    <string name="country_name_GREECE">GREECE</string>
+    <string name="country_name_GREENLAND">GREENLAND</string>
+    <string name="country_name_GRENADA">GRENADA</string>
+    <string name="country_name_GUADELOUPE">GUADELOUPE</string>
+    <string name="country_name_GUAM">GUAM</string>
+    <string name="country_name_GUATEMALA">GUATEMALA</string>
+    <string name="country_name_GUERNSEY">GUERNSEY</string>
+    <string name="country_name_GUINEA">GUINEA</string>
+    <string name="country_name_GUINEABISSAU">GUINEA BISSAU</string>
+    <string name="country_name_GUYANA">GUYANA</string>
+    <string name="country_name_HAITI">HAITI</string>
+    <string name="country_name_HEARDISLANDANDMCDONALDISLANDS">HEARD ISLAND AND MCDONALD ISLANDS</string>
+    <string name="country_name_HOLYSEEVATICANCITYSTATE">HOLY SEE (VATICAN CITY STATE)</string>
+    <string name="country_name_HONDURAS">HONDURAS</string>
+    <string name="country_name_HONGKONG">HONG KONG</string>
+    <string name="country_name_HUNGARY">HUNGARY</string>
+    <string name="country_name_ICELAND">ICELAND</string>
+    <string name="country_name_INDIA">INDIA</string>
+    <string name="country_name_INDONESIA">INDONESIA</string>
+    <string name="country_name_IRANISLAMICREPUBLICOF">IRAN, ISLAMIC REPUBLIC OF</string>
+    <string name="country_name_IRAQ">IRAQ</string>
+    <string name="country_name_IRELAND">IRELAND</string>
+    <string name="country_name_ISLEOFMAN">ISLE OF MAN</string>
+    <string name="country_name_ISRAEL">ISRAEL</string>
+    <string name="country_name_ITALY">ITALY</string>
+    <string name="country_name_JAMAICA">JAMAICA</string>
+    <string name="country_name_JAPAN">JAPAN</string>
+    <string name="country_name_JERSEY">JERSEY</string>
+    <string name="country_name_JORDAN">JORDAN</string>
+    <string name="country_name_KAZAKHSTAN">KAZAKHSTAN</string>
+    <string name="country_name_KENYA">KENYA</string>
+    <string name="country_name_KIRIBATI">KIRIBATI</string>
+    <string name="country_name_KOREADEMOCRATICPEOPLESREPUBLICOF">KOREA, DEMOCRATIC PEOPLE\'S REPUBLIC OF</string>
+    <string name="country_name_KOREAREPUBLICOF">KOREA, REPUBLIC OF</string>
+    <string name="country_name_KUWAIT">KUWAIT</string>
+    <string name="country_name_KYRGYZSTAN">KYRGYZSTAN</string>
+    <string name="country_name_LAOPEOPLESDEMOCRATICREPUBLIC">LAO PEOPLE\'S DEMOCRATIC REPUBLIC</string>
+    <string name="country_name_LATVIA">LATVIA</string>
+    <string name="country_name_LEBANON">LEBANON</string>
+    <string name="country_name_LESOTHO">LESOTHO</string>
+    <string name="country_name_LIBERIA">LIBERIA</string>
+    <string name="country_name_LIBYANARABJAMAHIRIYA">LIBYAN ARAB JAMAHIRIYA</string>
+    <string name="country_name_LIECHTENSTEIN">LIECHTENSTEIN</string>
+    <string name="country_name_LITHUANIA">LITHUANIA</string>
+    <string name="country_name_LUXEMBOURG">LUXEMBOURG</string>
+    <string name="country_name_MACAO">MACAO</string>
+    <string name="country_name_MACEDONIATHEFORMERYUGOSLAVREPUBLICOF">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</string>
+    <string name="country_name_MADAGASCAR">MADAGASCAR</string>
+    <string name="country_name_MALAWI">MALAWI</string>
+    <string name="country_name_MALAYSIA">MALAYSIA</string>
+    <string name="country_name_MALDIVES">MALDIVES</string>
+    <string name="country_name_MALI">MALI</string>
+    <string name="country_name_MALTA">MALTA</string>
+    <string name="country_name_MARSHALLISLANDS">MARSHALL ISLANDS</string>
+    <string name="country_name_MARTINIQUE">MARTINIQUE</string>
+    <string name="country_name_MAURITANIA">MAURITANIA</string>
+    <string name="country_name_MAURITIUS">MAURITIUS</string>
+    <string name="country_name_MAYOTTE">MAYOTTE</string>
+    <string name="country_name_MEXICO">MEXICO</string>
+    <string name="country_name_MICRONESIAFEDERATEDSTATESOF">MICRONESIA, FEDERATED STATES OF</string>
+    <string name="country_name_MOLDOVAREPUBLICOF">MOLDOVA, REPUBLIC OF</string>
+    <string name="country_name_MONACO">MONACO</string>
+    <string name="country_name_MONGOLIA">MONGOLIA</string>
+    <string name="country_name_MONTENEGRO">MONTENEGRO</string>
+    <string name="country_name_MONTSERRAT">MONTSERRAT</string>
+    <string name="country_name_MOROCCO">MOROCCO</string>
+    <string name="country_name_MOZAMBIQUE">MOZAMBIQUE</string>
+    <string name="country_name_MYANMAR">MYANMAR</string>
+    <string name="country_name_NAMIBIA">NAMIBIA</string>
+    <string name="country_name_NAURU">NAURU</string>
+    <string name="country_name_NEPAL">NEPAL</string>
+    <string name="country_name_NETHERLANDS">NETHERLANDS</string>
+    <string name="country_name_NETHERLANDSANTILLES">NETHERLANDS ANTILLES</string>
+    <string name="country_name_NEWCALEDONIA">NEW CALEDONIA</string>
+    <string name="country_name_NEWZEALAND">NEW ZEALAND</string>
+    <string name="country_name_NICARAGUA">NICARAGUA</string>
+    <string name="country_name_NIGER">NIGER</string>
+    <string name="country_name_NIGERIA">NIGERIA</string>
+    <string name="country_name_NIUE">NIUE</string>
+    <string name="country_name_NORFOLKISLAND">NORFOLK ISLAND</string>
+    <string name="country_name_NORTHERNMARIANAISLANDS">NORTHERN MARIANA ISLANDS</string>
+    <string name="country_name_NORWAY">NORWAY</string>
+    <string name="country_name_OMAN">OMAN</string>
+    <string name="country_name_PAKISTAN">PAKISTAN</string>
+    <string name="country_name_PALAU">PALAU</string>
+    <string name="country_name_PALESTINIANTERRITORYOCCUPIED">PALESTINIAN TERRITORY, OCCUPIED</string>
+    <string name="country_name_PANAMA">PANAMA</string>
+    <string name="country_name_PAPUANEWGUINEA">PAPUA NEW GUINEA</string>
+    <string name="country_name_PARAGUAY">PARAGUAY</string>
+    <string name="country_name_PERU">PERU</string>
+    <string name="country_name_PHILIPPINES">PHILIPPINES</string>
+    <string name="country_name_PITCAIRN">PITCAIRN</string>
+    <string name="country_name_POLAND">POLAND</string>
+    <string name="country_name_PORTUGAL">PORTUGAL</string>
+    <string name="country_name_PUERTORICO">PUERTO RICO</string>
+    <string name="country_name_QATAR">QATAR</string>
+    <string name="country_name_REUNION">REUNION</string>
+    <string name="country_name_ROMANIA">ROMANIA</string>
+    <string name="country_name_RUSSIANFEDERATION">RUSSIAN FEDERATION</string>
+    <string name="country_name_RWANDA">RWANDA</string>
+    <string name="country_name_SAINTBARTHÉLEMY">SAINT BARTHÉLEMY</string>
+    <string name="country_name_SAINTHELENA">SAINT HELENA</string>
+    <string name="country_name_SAINTKITTSANDNEVIS">SAINT KITTS AND NEVIS</string>
+    <string name="country_name_SAINTLUCIA">SAINT LUCIA</string>
+    <string name="country_name_SAINTMARTIN">SAINT MARTIN</string>
+    <string name="country_name_SAINTPIERREANDMIQUELON">SAINT PIERRE AND MIQUELON</string>
+    <string name="country_name_SAINTVINCENTANDTHEGRENADINES">SAINT VINCENT AND THE GRENADINES</string>
+    <string name="country_name_SAMOA">SAMOA</string>
+    <string name="country_name_SANMARINO">SAN MARINO</string>
+    <string name="country_name_SAOTOMEANDPRINCIPE">SAO TOME AND PRINCIPE</string>
+    <string name="country_name_SAUDIARABIA">SAUDI ARABIA</string>
+    <string name="country_name_SENEGAL">SENEGAL</string>
+    <string name="country_name_SERBIA">SERBIA</string>
+    <string name="country_name_SEYCHELLES">SEYCHELLES</string>
+    <string name="country_name_SIERRALEONE">SIERRA LEONE</string>
+    <string name="country_name_SINGAPORE">SINGAPORE</string>
+    <string name="country_name_SLOVAKIA">SLOVAKIA</string>
+    <string name="country_name_SLOVENIA">SLOVENIA</string>
+    <string name="country_name_SOLOMONISLANDS">SOLOMON ISLANDS</string>
+    <string name="country_name_SOMALIA">SOMALIA</string>
+    <string name="country_name_SOUTHAFRICA">SOUTH AFRICA</string>
+    <string name="country_name_SOUTHGEORGIAANDTHESOUTHSANDWICHISLANDS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</string>
+    <string name="country_name_SPAIN">SPAIN</string>
+    <string name="country_name_SRILANKA">SRI LANKA</string>
+    <string name="country_name_SUDAN">SUDAN</string>
+    <string name="country_name_SURINAME">SURINAME</string>
+    <string name="country_name_SVALBARDANDJANMAYEN">SVALBARD AND JAN MAYEN</string>
+    <string name="country_name_SWAZILAND">SWAZILAND</string>
+    <string name="country_name_SWEDEN">SWEDEN</string>
+    <string name="country_name_SWITZERLAND">SWITZERLAND</string>
+    <string name="country_name_SYRIANARABREPUBLIC">SYRIAN ARAB REPUBLIC</string>
+    <string name="country_name_TAIWANPROVINCEOFCHINA">TAIWAN, PROVINCE OF CHINA</string>
+    <string name="country_name_TAJIKISTAN">TAJIKISTAN</string>
+    <string name="country_name_TANZANIAUNITEDREPUBLICOF">TANZANIA, UNITED REPUBLIC OF</string>
+    <string name="country_name_THAILAND">THAILAND</string>
+    <string name="country_name_TIMORLESTE">TIMO LESTE</string>
+    <string name="country_name_TOGO">TOGO</string>
+    <string name="country_name_TOKELAU">TOKELAU</string>
+    <string name="country_name_TONGA">TONGA</string>
+    <string name="country_name_TRINIDADANDTOBAGO">TRINIDAD AND TOBAGO</string>
+    <string name="country_name_TUNISIA">TUNISIA</string>
+    <string name="country_name_TURKEY">TURKEY</string>
+    <string name="country_name_TURKMENISTAN">TURKMENISTAN</string>
+    <string name="country_name_TURKSANDCAICOSISLANDS">TURKS AND CAICOS ISLANDS</string>
+    <string name="country_name_TUVALU">TUVALU</string>
+    <string name="country_name_UGANDA">UGANDA</string>
+    <string name="country_name_UKRAINE">UKRAINE</string>
+    <string name="country_name_UNITEDARABEMIRATES">UNITED ARAB EMIRATES</string>
+    <string name="country_name_UNITEDKINGDOM">UNITED KINGDOM</string>
+    <string name="country_name_UNITEDSTATES">UNITED STATES</string>
+    <string name="country_name_UNITEDSTATESMINOROUTLYINGISLANDS">UNITED STATES MINOR OUTLYING ISLANDS</string>
+    <string name="country_name_URUGUAY">URUGUAY</string>
+    <string name="country_name_UZBEKISTAN">UZBEKISTAN</string>
+    <string name="country_name_VANUATU">VANUATU</string>
+    <string name="country_name_VENEZUELABOLIVARIANREPUBLICOF">VENEZUELA, BOLIVARIAN REPUBLIC OF</string>
+    <string name="country_name_VIETNAM">VIET NAM</string>
+    <string name="country_name_VIRGINISLANDSBRITISH">VIRGIN ISLANDS, BRITISH</string>
+    <string name="country_name_VIRGINISLANDSUS">VIRGIN ISLANDS, U.S.</string>
+    <string name="country_name_WALLISANDFUTUNA">WALLIS AND FUTUNA</string>
+    <string name="country_name_WESTERNSAHARA">WESTERN SAHARA</string>
+    <string name="country_name_YEMEN">YEMEN</string>
+    <string name="country_name_ZAMBIA">ZAMBIA</string>
+    <string name="country_name_ZIMBABWE">ZIMBABWE</string>
+    <string name="msg_delete_tip">delete tip</string>
+    <string name="msg_delete_success">deleted</string>
+    <string name="msg_dialog_if_clear_all">Sure you want to clear all message?</string>
+    <string name="msg_dialog_if_clear_all_success">The message has been cleared</string>
+    <string name="draft_dialog_remove_content">once you remove this draft, it can\'t be recover.</string>
+    <string name="order_filter_already_reset">已经重置</string>
+    <string name="pay_dialog_titile">订单支付</string>
+    <string name="pay_tip_success">恭喜你,支付成功!</string>
+    <string name="pay_tip_fail">对不起,支付失败! </string>
+    <string name="pay_create_success_go_to_pay">生成成功,确认支付？</string>
+    <string name="pay_create_fail_cause">订单生成失败! </string>
+    <string name="pay_if_recharge">是否进行充值</string>
+    <string name="pay_order">订单</string>
+    <string name="pay_paypal_success_order_validing">Paypal支付完成，支付订单验证中</string>
+    <string name="recharge_tip_success">恭喜你，充值成功!</string>
+    <string name="recharge_tip_fail">对不起,充值失败! </string>
+    <string name="recharge_dialog_title">充值订单</string>
+    <string name="recharge_recharge_order">充值订单:</string>
+    <string name="recharge_dialog_confirm">确定为订单：%d 充值？</string>
+    <string name="recharge_money_empty">Please input money</string>
+    <string name="common_tip_submit_error">sorry, submit failed!</string>
+    <string name="find_order_detail_please_apply_deliver">Please be delivered before order！</string>
+    <string name="find_order_have_price">Have price, cannot repeat price!</string>
+    <string name="find_order_self">Can\'t come to your list!</string>
+    <string name="find_order_forbid">The current order is prohibited!</string>
+    <string name="find_order_not_exist">This no longer exists</string>
+    <string name="find_order_by_other">Others have orders</string>
+    <string name="find_order_must_be_deliver">Check the order information must be single</string>
+
+    <string name="pay_pwd_modify_success">pay password modified successfully</string>
+    <string name="common_dialog_cancel">取消</string>
+    <string name="action_clear">清除</string>
+    <string name="action_save">保存</string>
+    <string name="create_plan_input_start_date_first">please select start date first</string>
+    <string name="common_dialog_yes">Yes</string>
+    <string name="common_tip_download_background">Background download...</string>
+    <string name="common_tip_inpu_not_allow_empty">input not allow empty</string>
+    <string name="common_tip_unknown_error">unkown error:</string>
+    <string name="common_tip_upload_img_fail">upload picture failed!</string>
+    <string name="common_you">You</string>
+    <string name="apply_photo_photo_not_allow_empty">portrait can not be empty</string>
+    <string name="bargain_order_not_yours">This order does not belong to you, no permission to view</string>
+    <string name="choose_addr_select_address_before_submit">please select an address before submit</string>
+    <string name="choose_addr_toast_pin_wrong">中心地址获取失败</string>
+    <string name="map_window_click_to_see_detail">点此查看详情</string>
+    <string name="acc_info_not_set">尚未设置</string>
+    <string name="acc_info_set_pay_pwd_first">请输入您的登录密码</string>
+    <string name="acc_info_set_new_pay_pwd">设置新的支付密码</string>
+    <string name="dialog_retry_disconnect">网络未连接，是否重试？</string>
+    <string name="dialog_retry_time_out">连接超时，是否重试？</string>
+    <string name="dialog_retry_server_error">服务器繁忙，是否重试？</string>
+    <string name="location_locate_updating">正在定位，请稍后</string>
+    <string name="register_pay_pwd_not_allow_empty">支付密码不能为空</string>
+    <string name="register_pay_pwd_can_not_eq_to_login_pwd">支付密码不能与登录密码相同</string>
+    <string name="common_tip_save_success">保存成功</string>
+    <string name="common_tip_save_fail">保存失败</string>
+    <string name="choose_addr_current_no_address_name">当前选择的位置没有地址名称，请重试</string>
+    <string name="common_tip_confirm_exit">所填信息尚未提交，您确定要退出吗？</string>
+    <string name="common_tip_can_not_setting_gps">无法打开GPS设置界面</string>
+    <string name="common_tip_login_invalid">登录已失效，请重新登录</string>
+    <string name="suggest_content_not_allow_empty">请填写反馈信息后再提交！</string>
+    <string name="common_tip_can_not_open_contact">无法打开通信录，请手动输入</string>
+    <string name="register_service_rule"><u>service rules</u></string>
+    <string name="register_phone_invalid">电话号码格式有误</string>
+    <string name="acc_info_email_invalid">邮箱格式不正确</string>
+    <string name="dialog_input_markup_not_0">加价金额不能为0</string>
+    <string name="login_pwd_forget_pwd"><u>忘记密码</u></string>
+    <string name="login_pwd_modify_pwd">修改登录密码</string>
+    <string name="login_pwd_old_pwd">旧的登录密码</string>
+    <string name="login_pwd_new_pwd">新的登录密码</string>
+    <string name="login_pwd_old_pwd_not_correct">旧的登录密码有误</string>
+    <string name="title_activity_modify_login_pwd">修改登录密码</string>
+    <string name="login_pwd_modify_success">修改登录密码成功</string>
+    <string name="pay_pwd_modify_success_title">修改支付密码成功</string>
+    <string name="common_tip_share">分享</string>
+    <string name="forget_pwd_account_not_exist">该账户不存在</string>
+    <string name="common_tip_back_to_main">返回主页</string>
+    <string name="common_tip_version_found_new">发现新的版本</string>
+    <string name="wallet_function">wallet function</string>
+    <string name="wallet_record">wallet record</string>
+    <string name="common_dialog_loading">loading...</string>
+    <string name="location_error">location failure</string>
+    <string name="locaton_error_tips">Get current position required GPS, whether visit</string>
+
+
 </resources>

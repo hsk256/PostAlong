@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cqzthd.zhongtou.ui.activity.order.pay.PayActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/rl_pay_first">
+
+            <TextView
+                style="@style/tv_pay_name_top"
+                android:textColor="@color/tv_black_2"
+                android:text="@string/pay_total" />
+
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="$20.00"
+                android:textColor="@color/money_color_d92400"
+                android:textSize="@dimen/text_size_25" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/rl_pay_second">
+
+            <TextView
+                style="@style/tv_pay_name_top"
+                android:textColor="@color/tv_black_2"
+                android:text="@string/pay_order_name" />
+
+            <TextView
+                android:id="@+id/tv_theme"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/main_black_333"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <View
+            style="@style/h_line"
+            android:layout_marginTop="15dp" />
+
+        <RelativeLayout style="@style/rl_pay_55">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/pay_use_coupon"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/text_size_15" />
+
+            <Spinner
+                android:id="@+id/spinner_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:spinnerMode="dropdown" />
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_wallet"
+            style="@style/rl_pay_55">
+
+            <ImageView
+                android:id="@+id/icon_wallet"
+                style="@style/iv_pay_left"
+                android:src="@mipmap/icon_wallet" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/pay_margin_left"
+                android:layout_toRightOf="@id/icon_wallet"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_pay_way_name"
+                    android:text="@string/pay_use_wallet" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_pay_way_value"
+                        android:text="@string/pay_you_have" />
+
+                    <TextView
+                        android:id="@+id/tv_money_left"
+                        style="@style/tv_pay_way_value"
+                        android:text=" $ 0"
+                        android:textColor="@color/money_color_d92400"/>
+
+                    <!--<TextView-->
+                        <!--style="@style/tv_pay_way_value"-->
+                        <!--android:text="@string/pay_left" />-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_wallet_zhiwen"
+                style="@style/iv_pay_right"
+                android:src="@mipmap/icon_zhiwen_enable" />
+
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_paypal"
+            style="@style/rl_pay_55">
+
+            <ImageView
+                android:id="@+id/icon_paypal"
+                style="@style/iv_pay_left"
+                android:src="@mipmap/icon_paypal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/pay_margin_left"
+                android:layout_toRightOf="@id/icon_paypal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_pay_way_name"
+                        android:text="@string/pay_use" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" pay"
+                        android:textColor="#ff0a2682" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pal"
+                        android:textColor="#ff0090bc" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_pay_way_value"
+                    android:text="@string/pay_go_to_paypal_page" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_paypal_zhiwen"
+                style="@style/iv_pay_right"
+                android:src="@mipmap/icon_zhiwen_disable" />
+
+        </RelativeLayout>
+
+        <View style="@style/h_line" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_btn_bottom_common">
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/btn_pay"
+            style="@style/ripple_btn_bottom_single_navy_blue">
+
+            <TextView
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/btn_order_pay" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/include_loading" />
+    </RelativeLayout>

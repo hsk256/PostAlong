@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <!--listView有头部，在代码设置-->
+    <include layout="@layout/activity_account_balance_head" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.publicexpress.ui.widget.LoadUpListView
+            android:id="@+id/lv_balance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="@dimen/dp_1"
+            android:footerDividersEnabled="false"
+            android:visibility="visible" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
+
+

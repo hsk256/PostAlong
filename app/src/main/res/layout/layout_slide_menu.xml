@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?><!--左侧导航菜单-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ll_person_center"
+        style="@style/ripple_drawer_row"
+        android:layout_height="@dimen/drawer_account_info_height"
+        app:mrl_rippleBackground="@color/main_green_deliver">
+        <!--个人中心部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/re_head_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/head_photo"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:src="@mipmap/icon_default_head"
+                    app:border_color="@color/head_pic_border"
+                    app:border_width="2dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@+id/re_head_photo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_no_login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_17"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_name"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_ptitle"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:src="@mipmap/icon_cup" />
+                    <!--头衔-->
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/menu_no_titile"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <!--<View-->
+    <!--style="@style/drawer_h_line"-->
+    <!--android:layout_below="@+id/ll_person_center" />-->
+    <!--侧边栏-->
+    <ScrollView
+        android:id="@+id/cv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_person_center"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/rl_main"-->
+            <!--style="@style/ripple_drawer_row">-->
+
+            <!--<RelativeLayout style="@style/rl_drawer_row">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_main"-->
+            <!--style="@style/iv_row_icon"-->
+            <!--android:src="@mipmap/icon_drawer_receive_order" />-->
+
+            <!--<TextView-->
+            <!--style="@style/tv_row"-->
+            <!--android:layout_toRightOf="@id/iv_main"-->
+            <!--android:text="@string/menu_home_page" />-->
+
+            <!--<ImageView style="@style/iv_icon_right" />-->
+
+            <!--</RelativeLayout>-->
+            <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+
+            <!--<View style="@style/drawer_h_line" />-->
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_wallet"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_wallet"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_wallet" />
+
+                    <TextView
+                        android:id="@+id/iv_wallet_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_wallet"
+                        android:text="@string/menu_my_wallet"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View style="@style/drawer_h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_send_order"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_send_order"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_my_order" />
+
+                    <TextView
+                        android:id="@+id/iv_send_order_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_send_order"
+                        android:text="@string/menu_my_billing_order"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_send_notice"-->
+                    <!--style="@style/tv_row_notice"-->
+                    <!--android:layout_toRightOf="@+id/tv_send"-->
+                    <!--android:text="1" />-->
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View style="@style/drawer_h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_receive_order"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_receive_order"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_my_receive" />
+
+                    <TextView
+                        android:id="@+id/iv_receive_order_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_receive_order"
+                        android:text="@string/menu_my_receiving_order"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_receive_notice"-->
+                    <!--style="@style/tv_row_notice"-->
+                    <!--android:layout_toRightOf="@+id/tv_receive"-->
+                    <!--android:background="@drawable/bg_tv_circle_green"-->
+                    <!--android:text="5" />-->
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View style="@style/drawer_h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_create_plan"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_create_plan"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_my_trip" />
+
+                    <TextView
+                        android:id="@+id/iv_create_plan_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_create_plan"
+                        android:text="@string/menu_create_plan"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_receive_notice"-->
+                    <!--style="@style/tv_row_notice"-->
+                    <!--android:layout_toRightOf="@+id/tv_receive"-->
+                    <!--android:background="@drawable/bg_tv_circle_green"-->
+                    <!--android:text="5" />-->
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <!--<View style="@style/drawer_h_line" />-->
+
+            <!--<com.balysv.materialripple.MaterialRippleLayout-->
+            <!--android:id="@+id/rl_help"-->
+            <!--style="@style/ripple_drawer_row">-->
+
+            <!--<RelativeLayout style="@style/rl_drawer_row">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_help"-->
+            <!--style="@style/iv_row_icon"-->
+            <!--android:src="@mipmap/icon_drawer_help" />-->
+
+            <!--<TextView-->
+            <!--style="@style/tv_row"-->
+            <!--android:layout_toRightOf="@id/iv_help"-->
+            <!--android:text="@string/menu_operate_instructions" />-->
+
+            <!--<ImageView style="@style/iv_icon_right" />-->
+
+            <!--</RelativeLayout>-->
+            <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+
+            <View
+                android:id="@+id/schedule_line"
+                style="@style/drawer_h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_apply"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_apply"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_my_apply" />
+
+                    <TextView
+                        android:id="@+id/iv_apply_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_apply"
+                        android:text="@string/menu_deliver_application"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View
+                android:id="@+id/rl_apply_line"
+                style="@style/drawer_h_line" />
+
+            <!--最底部的意见反馈-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ll_suggest"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_contact"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_my_feedback" />
+
+                    <TextView
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_contact"
+                        android:text="@string/menu_contact_customer_service"
+                        android:textColor="@drawable/slide_text_color" />
+
+                </RelativeLayout>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View style="@style/drawer_h_line" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rl_setting"
+                style="@style/ripple_drawer_row">
+
+                <RelativeLayout style="@style/rl_drawer_row">
+
+                    <ImageView
+                        android:id="@+id/iv_setting"
+                        style="@style/iv_row_icon"
+                        android:background="@drawable/slide_img_setting" />
+
+                    <TextView
+                        android:id="@+id/iv_setting_text"
+                        style="@style/tv_row"
+                        android:layout_toRightOf="@id/iv_setting"
+                        android:text="@string/menu_setting"
+                        android:textColor="@drawable/slide_text_color" />
+
+                    <!--<ImageView style="@style/iv_icon_right" />-->
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View style="@style/drawer_h_line" />
+            <!--<View android:layout_width="2dp" android:layout_height="50dp" android:background="#ff03242c"/>-->
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

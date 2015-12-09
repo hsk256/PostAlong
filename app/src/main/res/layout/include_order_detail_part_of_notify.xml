@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_notify"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_49"
+    android:visibility="gone">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/ripple_drawer_row"
+        app:mrl_rippleBackground="#fffff3e5">
+
+        <RelativeLayout
+            android:id="@+id/rl_notify_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_notify"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_notify" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_notify"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/order_detail_tip_new_advice_have_not_read"
+                android:textColor="@color/status_done_cancel_comment_bargain" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/comment_face"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:src="@mipmap/icon_default_head"
+            app:border_color="@color/head_pic_border"
+            app:border_width="@dimen/dp_2" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/credibility_img"
+            android:layout_alignTop="@+id/credibility_img"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_toRightOf="@+id/comment_face"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/main_black_333"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:id="@+id/credibility_img"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_4"
+            android:layout_toLeftOf="@+id/tv_p_title"
+            android:src="@mipmap/icon_p_title_shibing" />
+
+        <TextView
+            android:id="@+id/tv_p_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/credibility_img"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/credibility_img"
+            android:gravity="center"
+            android:text="shibing"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_toRightOf="@+id/comment_face"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_comment"
+            android:layout_alignStart="@+id/tv_comment"
+            android:layout_below="@+id/tv_comment"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="well"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_comment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_score"
+            android:layout_alignParentRight="true"
+            android:text="date"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <View
+        style="@style/h_line"
+        android:layout_height="@dimen/dp_8" />
+</LinearLayout>
+

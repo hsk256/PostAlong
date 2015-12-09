@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_distance"
+                style="@style/ll_find_order_head"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    style="@style/tv_find_order_head"
+                    android:text="@string/find_order_distance"
+                    android:textColor="@color/main_green_26a65b" />
+
+                <ImageView
+                    android:id="@+id/iv_distance"
+                    style="@style/iv_find_order_head"
+                    android:src="@mipmap/icon_sort_up"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <View style="@style/v_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_latest"
+                style="@style/ll_find_order_head">
+
+                <TextView
+                    android:id="@+id/tv_latest"
+                    style="@style/tv_find_order_head"
+                    android:text="@string/find_order_latest" />
+
+                <ImageView
+                    android:id="@+id/iv_latest"
+                    style="@style/iv_find_order_head"
+                    android:src="@mipmap/icon_sort_down" />
+            </LinearLayout>
+
+            <View style="@style/v_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_reward"
+                style="@style/ll_find_order_head">
+
+                <TextView
+                    android:id="@+id/tv_reward"
+                    style="@style/tv_find_order_head"
+                    android:text="@string/find_order_reward" />
+
+                <ImageView
+                    android:id="@+id/iv_reward"
+                    style="@style/iv_find_order_head"
+                    android:src="@mipmap/icon_sort_down" />
+            </LinearLayout>
+
+            <View style="@style/v_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_weight"
+                style="@style/ll_find_order_head">
+
+                <TextView
+                    android:id="@+id/tv_weight_name"
+                    style="@style/tv_find_order_head"
+                    android:text="@string/find_order_weight" />
+
+                <ImageView
+                    android:id="@+id/iv_weight"
+                    style="@style/iv_find_order_head"
+                    android:src="@mipmap/icon_sort_up" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/border_line_e8e8e8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_4"
+            android:background="@drawable/bg_ll_border_order_title" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_title">
+
+        <com.android.publicexpress.ui.widget.LoadMoreListView
+            android:id="@+id/lv_find_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="8dp"
+            android:footerDividersEnabled="false" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--<include layout="@layout/include_loading" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_none"
+            android:layout_width="@dimen/dp_74"
+            android:layout_height="@dimen/dp_74"
+            android:src="@drawable/icon_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/common_tip_no_data"
+            android:textColor="@color/gray_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="@dimen/dp_74"
+            android:layout_height="@dimen/dp_74"
+            android:src="@drawable/wifi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/common_tip_no_network"
+            android:textColor="@color/gray_light" />
+    </LinearLayout>
+
+
+</RelativeLayout>

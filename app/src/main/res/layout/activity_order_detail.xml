@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <include
+        android:id="@+id/order_detail_toolbar"
+        layout="@layout/toolbar" />
+
+    <include layout="@layout/include_loading" />
+
+    <ScrollView
+        android:id="@+id/order_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_detail_toolbar"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--递送人已加价显示-->
+            <include layout="@layout/include_order_detail_part_of_has_reward" />
+
+            <!--新的议价提示-->
+            <include layout="@layout/include_order_detail_part_of_notify" />
+
+            <!--递送人详情-->
+            <include layout="@layout/include_order_detail_part_of_deliver" />
+
+            <!--地址详情-->
+            <include layout="@layout/include_order_detail_part_of_address" />
+
+            <!--物品详情-->
+            <include layout="@layout/include_order_detail_part_of_good" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--以下是按钮列表-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!--按钮：加价与抢单（在activity_find_order_detail引用）-->
+        <!--<include layout="@layout/include_order_detail_btn_markup_collect"/>-->
+
+        <!--按钮：编辑与重发-->
+        <include layout="@layout/include_order_detail_btn_edit_resend" />
+
+        <!--按钮：取消订单按钮-->
+        <include layout="@layout/include_order_detail_btn_cancel" />
+
+        <!--按钮：取消议价按钮-->
+        <include layout="@layout/include_order_detail_bargain_btn_cancel" />
+
+        <!--按钮：评价按钮-->
+        <include layout="@layout/include_order_detail_btn_comment" />
+
+        <!--按钮：支付按钮-->
+        <include layout="@layout/include_order_detail_btn_pay" />
+
+        <!--按钮：确认收货按钮-->
+        <include layout="@layout/include_order_detail_btn_order_done" />
+
+        <!--按钮：发送验证码 输入验证码 按钮-->
+        <include layout="@layout/include_order_detail_btn_send_input_code" />
+
+        <!--状态栏-->
+        <include layout="@layout/include_order_detail_part_of_bottom_status" />
+    </FrameLayout>
+</RelativeLayout>

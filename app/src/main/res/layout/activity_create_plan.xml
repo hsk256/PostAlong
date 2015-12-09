@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/plan_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_margin="@dimen/div_margin_left_right"
+        android:layout_marginBottom="@dimen/dp_62"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_wrap_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_15">
+
+                    <LinearLayout style="@style/ll_vertical_create_order_2">
+
+                        <ImageView
+                            style="@style/iv_create_order_2_small"
+                            android:src="@mipmap/icon_location_red" />
+
+                        <ImageView
+                            style="@style/iv_create_order_2_vertical"
+                            android:src="@mipmap/icon_arrow_down" />
+
+                        <ImageView
+                            style="@style/iv_create_order_2_small"
+                            android:src="@mipmap/icon_destination" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/ripple_create_trip"
+                            app:mrl_rippleDelayClick="true">
+
+                            <EditText
+                                android:id="@+id/tv_from"
+                                style="@style/et_create_plan_select"
+                                android:hint="@string/create_plan_hint_start_off" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <View style="@style/h_line.create_order" />
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/ripple_create_trip"
+                            app:mrl_rippleDelayClick="true">
+
+                            <EditText
+                                android:id="@+id/tv_to"
+                                style="@style/et_create_plan_select"
+                                android:hint="@string/create_plan_hint_destination" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/h_line.create_order" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple_add"
+                    style="@style/ripple_create_trip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp_15">
+
+                        <LinearLayout style="@style/ll_vertical_create_order_2">
+
+                            <ImageView
+                                style="@style/iv_create_order_2_small"
+                                android:layout_width="@dimen/dp_48"
+                                android:layout_height="@dimen/dp_48"
+                                android:padding="@dimen/dp_14"
+                                android:src="@mipmap/icon_add" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:hint="@string/create_plan_add_way"
+                            android:textColor="@color/edit_text_hint"
+                            android:textSize="@dimen/text_size_16" />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <View style="@style/h_line.create_order" />
+
+                <LinearLayout
+                    android:id="@+id/ll_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_15">
+
+                    <LinearLayout style="@style/ll_vertical_create_order_2">
+
+                        <ImageView
+                            style="@style/iv_create_order_2_small"
+                            android:src="@mipmap/icon_time" />
+
+                        <ImageView
+                            style="@style/iv_create_order_2_vertical"
+                            android:src="@mipmap/icon_arrow_down" />
+
+                        <ImageView
+                            style="@style/iv_create_order_2_small"
+                            android:src="@mipmap/icon_clock" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/tv_startDate"
+                            style="@style/et_create_plan_select"
+                            android:hint="@string/create_plan_start_date" />
+
+                        <View style="@style/h_line.create_order" />
+
+                        <EditText
+                            android:id="@+id/tv_endDate"
+                            style="@style/et_create_plan_select"
+                            android:hint="@string/create_plan_end_date" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/h_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingBottom="@dimen/dp_5">
+
+                        <com.android.publicexpress.ui.widget.EditTextWithDel
+                            android:id="@+id/et_desc"
+                            style="@style/et_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_desc"
+                            android:layout_marginBottom="@dimen/dp_6"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:layout_marginRight="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="top|start"
+                            android:hint="@string/create_plan_hint_input_description"
+                            android:inputType="textMultiLine"
+                            android:lineSpacingExtra="3dp"
+                            android:minLines="5"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <TextView
+                            android:id="@+id/tv_words"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_desc"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:layout_marginRight="@dimen/dp_8"
+                            android:background="#fff"
+                            android:gravity="right"
+                            android:text="@string/common_tip_input_words"
+                            android:textColor="@color/tv_name"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--空白位置-->
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_74" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--底部状态栏-->
+   <include layout="@layout/include_bottom_status"/>
+</RelativeLayout>

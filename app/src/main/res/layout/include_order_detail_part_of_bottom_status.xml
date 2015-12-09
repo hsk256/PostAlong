@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--订单状态：已评价等等-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_order_status"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_order_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff7f7f7"
+        android:gravity="center"
+        android:text="@string/order_btn_has_been_comment"
+        android:textColor="@color/tv_value"
+        android:textSize="@dimen/text_size_16" />
+</LinearLayout>

@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.publicexpress.ui.activity.wallet.WithdrawActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_below="@+id/line1">
+
+            <ImageView
+                android:id="@+id/im"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:src="@mipmap/icon_paypal" />
+
+            <LinearLayout
+                android:id="@+id/tv_payname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_toRightOf="@+id/im"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paypal_use"
+                    android:textColor="@color/main_black_333"
+                    android:textSize="@dimen/text_size_17"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paypal_pay"
+                    android:textColor="@color/tv_pay_color"
+                    android:textSize="@dimen/text_size_17" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paypal_pal"
+                    android:textColor="@color/tv_pal_color"
+                    android:textSize="@dimen/text_size_17" />
+            </LinearLayout>
+
+            <TextView
+                style="@color/gray_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_payname"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_toRightOf="@+id/im"
+                android:text="@string/bind_account_desc"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line2"
+            style="@style/h_line"
+            android:layout_height="@dimen/dp_8"
+            android:layout_below="@+id/rl_paypal" />
+
+        <LinearLayout
+            style="@style/ll_create_order_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                style="@style/bind_paypal"
+                android:src="@mipmap/icon_host" />
+
+            <com.android.publicexpress.ui.widget.EditTextWithDel
+                android:id="@+id/et_paypal_account_name"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@null"
+                android:hint="@string/bind_username"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+
+        <LinearLayout
+            style="@style/ll_create_order_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                style="@style/bind_paypal"
+                android:src="@mipmap/icon_pay_id" />
+
+            <com.android.publicexpress.ui.widget.EditTextWithDel
+                android:id="@+id/et_paypal_account"
+                style="@style/et_common"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@null"
+                android:hint="@string/bind_account"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View style="@style/h_line" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<View style="@style/h_line" />-->
+
+        <!--<LinearLayout style="@style/ll_btn_bottom_common">-->
+
+            <!--<View style="@style/h_line" />-->
+
+            <!--<com.balysv.materialripple.MaterialRippleLayout-->
+                <!--android:id="@+id/btn_ok"-->
+                <!--style="@style/ripple_btn_bottom_single_navy_blue">-->
+
+                <!--<TextView-->
+                    <!--style="@style/tv_btn_bottom_blue_common"-->
+                    <!--android:text="@string/bind_btn" />-->
+            <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <include layout="@layout/include_loading" />
+</RelativeLayout>

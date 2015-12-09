@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bargain_btn_cancel"
+    style="@style/ll_btn_bottom_common"
+    android:visibility="gone">
+
+    <View style="@style/h_line" />
+
+    <com.balysv.materialripple.MaterialRippleLayout style="@style/ripple_btn_bottom_single_red">
+
+        <TextView
+            android:id="@+id/btn_bargain_cancel"
+            style="@style/tv_btn_bottom_red"
+            android:text="@string/btn_order_cancel_bargain" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

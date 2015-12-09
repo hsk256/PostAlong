@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:text="@string/address_history_title"
+        android:textColor="@color/tv_value"
+        android:textSize="@dimen/text_size_18" />
+
+    <View
+        style="@style/h_line"
+        android:layout_below="@+id/tv_title" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16" />
+
+    <!-- 文字提示区域 -->
+    <RelativeLayout
+        android:id="@+id/ll_tv_empty_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_16">
+
+        <!--提示标题-->
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/address_history_no_history_address"
+            android:textColor="@color/tv_value"
+            android:textSize="@dimen/text_size_18" />
+
+        <!--提示描述-->
+        <TextView
+            android:id="@+id/tv_empty_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/address_history_tip"
+            android:textColor="@color/edit_text_hint"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <!--没有网络、网络出错的时候提示内容-->
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_16">
+
+        <!--失败的图标-->
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_100"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_error" />
+
+        <!--重试描述-->
+        <TextView
+            android:id="@+id/tv_error_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_error"
+            android:layout_centerHorizontal="true"
+            android:text="网络不通，点击重试"
+            android:textColor="@color/edit_text_hint"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+
+    <!--列表加载的进度条-->
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

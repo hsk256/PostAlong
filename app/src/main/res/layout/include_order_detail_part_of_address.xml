@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_4"
+            android:paddingLeft="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:text="@string/order_detail_title_address"
+            android:background="@color/gray_order_title"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_sender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_48"
+        android:paddingLeft="@dimen/dp_20"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/tv_order_detail_address_name"
+            android:text="@string/order_detail_sender" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_48"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/ll_sender_char_phone"
+                android:gravity="center_vertical"
+                android:text="Name"
+                android:textColor="@color/tv_value"
+                android:textSize="@dimen/text_size_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_sender_char_phone"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/iv_sender_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:src="@mipmap/icon_sms" />
+
+                <ImageView
+                    android:id="@+id/iv_sender_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:src="@mipmap/icon_phone_order_detail" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_48"
+        android:paddingLeft="@dimen/dp_20">
+
+        <TextView
+            style="@style/tv_order_detail_address_name"
+            android:text="@string/order_detail_from" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_from_value"
+                style="@style/tv_order_detail_address_value"
+                android:text="Address" />
+
+            <ImageView
+                android:id="@+id/iv_location_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:src="@mipmap/icon_location_no_color"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_detail"
+        style="@style/h_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_48"
+        android:paddingLeft="@dimen/dp_20"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/tv_order_detail_address_name"
+            android:text="@string/order_detail_receive" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_48"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/ll_receiver_char_phone"
+                android:gravity="center_vertical"
+                android:text="Name"
+                android:textColor="@color/tv_value"
+                android:textSize="@dimen/text_size_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_receiver_char_phone"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_receiver_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:src="@mipmap/icon_sms" />
+
+                <ImageView
+                    android:id="@+id/iv_receiver_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:src="@mipmap/icon_phone_order_detail" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/dp_48"
+        android:paddingLeft="@dimen/dp_20">
+
+        <TextView
+            style="@style/tv_order_detail_address_name"
+            android:text="@string/order_detail_to" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_to_value"
+                style="@style/tv_order_detail_address_value"
+                android:text="Address" />
+
+            <ImageView
+                android:id="@+id/iv_location_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:src="@mipmap/icon_location_no_color"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_65"
+        android:orientation="horizontal">
+
+        <LinearLayout style="@style/ll_rl_order_detail_double_v">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_detail_get_time"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_get_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text=""
+                android:textColor="@color/tv_black_1"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View style="@style/v_line" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_detail_deadline"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text=""
+                android:textColor="@color/tv_black_1"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--<View style="@style/h_line" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_48"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:paddingLeft="@dimen/dp_20">-->
+
+        <!--<TextView-->
+            <!--style="@style/tv_order_detail_address_name"-->
+            <!--android:text="@string/order_detail_value" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_value"-->
+            <!--style="@style/tv_order_detail_address_value"-->
+            <!--android:text="0" />-->
+    <!--</LinearLayout>-->
+
+    <!--<View style="@style/h_line" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:minHeight="@dimen/dp_48"-->
+        <!--android:paddingLeft="@dimen/dp_20">-->
+
+        <!--<TextView-->
+            <!--style="@style/tv_order_detail_address_name"-->
+            <!--android:text="@string/order_detail_desc" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_desc"-->
+            <!--style="@style/tv_order_detail_address_value"-->
+            <!--android:text="Description" />-->
+    <!--</LinearLayout>-->
+
+    <!--<View style="@style/h_line" />-->
+
+    <!--<GridView-->
+        <!--android:id="@+id/gv_order_detail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/dp_16"-->
+        <!--android:layout_marginLeft="@dimen/dp_16"-->
+        <!--android:layout_marginRight="@dimen/dp_16"-->
+        <!--android:layout_marginTop="@dimen/dp_16"-->
+        <!--android:numColumns="4" />-->
+
+    <!--<View-->
+        <!--android:layout_width="@dimen/dp_1"-->
+        <!--android:layout_height="@dimen/dp_40" />-->
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_loading" />
+
+    <include layout="@layout/toolbar" />
+
+    <!--listView有头部，在代码设置-->
+    <ListView
+        android:id="@+id/lv_point"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_toolbar"
+        android:visibility="visible" />
+
+</RelativeLayout>

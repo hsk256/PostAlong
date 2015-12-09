@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_apply"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:layout_marginBottom="@dimen/dp_4"
+    app:mrl_rippleBackground="@color/white"
+    app:mrl_rippleColor="@color/bg_drawer_press">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            style="@style/h_line"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:layout_width="@dimen/dp_3"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/common_light_blue" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/drafts_name_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_18"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_draft_name"
+                    android:text="@string/draft_name" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/tv_draft_value"
+                    android:maxLength="26"
+                    android:text="River flows in you in every body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/drafts_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drafts_name_layout"
+                android:layout_marginLeft="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_3"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_draft_name"
+                    android:text="@string/draft_time" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/tv_draft_value"
+                    android:singleLine="true"
+                    android:text="River flows in you" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<com.balysv.materialripple.MaterialRippleLayout-->
+        <!--android:id="@+id/ripple_draft_btn"-->
+        <!--android:layout_width="@dimen/dp_60"-->
+        <!--android:layout_height="@dimen/dp_34"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--app:mrl_rippleColor="@color/tv_black_1">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_btn_name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/common_edit"-->
+        <!--android:textColor="@color/tv_draft_green"-->
+        <!--android:background="@color/btn_draft_green"-->
+        <!--android:textSize="@dimen/text_size_13" />-->
+
+        <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_34"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@drawable/bg_btn_draft"
+            android:text="@string/common_remove"
+            android:textAllCaps="false"
+            android:textColor="@color/status_wait_pay"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            style="@style/h_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

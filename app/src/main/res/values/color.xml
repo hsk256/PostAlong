@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--—————————————公共部分————————————————-->
+    <!--toolbar绿色 主绿-->
+    <color name="main_green_26a65b">#26a65b</color>
+    <!--主页的按钮deliver-->
+    <color name="main_green_deliver">#41ca74</color>
+    <color name="main_green_deliver_press">#339750</color>
+    <color name="main_green_press">#256b39</color>
+    <!--网格部分点击-->
+    <color name="bg_drawer_ripple">#ff3fc776</color>
+    <!--藏青色和蓝色按钮的字体颜色-->
+    <color name="tv_btn_blue_common">#ffceefd0</color>
+
+    <!-- photopicker-->
+    <color name="camera_background">#ff353535</color>
+    <color name="tv_black_1">#ff535353</color>
+    <!--字体黑色2-->
+    <color name="tv_black_2">#ff454545</color>
+    <!--字体黑色3-->
+    <color name="main_black_333">#333</color>
+    <color name="tv_value">#5f5d5d</color>
+
+    <!--—————————————按钮颜色————————————————-->
+    <!--藏青色按钮背景-->
+    <color name="btn_navy_blue">#06495a</color>
+    <!--<color name="bg_drawer_contact">#ff063d4b</color>-->
+
+    <!--Paypal字体颜色之pay-->
+    <color name="tv_pay_color">#002e86</color>
+    <!--导航press与联系客服颜色-->
+    <color name="bg_drawer_press">#0c819d</color>
+    <!-- 接单完成页面“view order”button 未取货/未评价-->
+    <color name="common_light_blue">#23A0CF</color>
+    <!--Paypal字体颜色之pal-->
+    <color name="tv_pal_color">#68b7e7</color>
+
+    <!--红色按钮的press颜色-->
+    <color name="btn_red_press">#ff913c2e</color>
+    <!--reward $金钱字体颜色-->
+    <color name="money_color_d92400">#d92400</color>
+    <color name="common_red">#FF0000</color>
+    <!-- 取消按钮的背景颜色 -->
+    <color name="btn_cancel">#fc614d</color>
+    <!--待付款-&#45;&#45;》》 红色  #ff8474-->
+    <color name="status_wait_pay">#ff8474</color>
+
+    <!--屏幕下方按钮的深橘色背景颜色-->
+    <color name="btn_pink">#f6ccc2</color>
+    <!-- 订单详情collect button-->
+    <color name="btn_draft_pink">#ffffeae8</color>
+
+    <color name="wallet_title">#FE784B</color>
+    <!--已取货/已取消/已评价/议价中 橙色   #f39800-->
+    <color name="status_done_cancel_comment_bargain">#f39800</color>
+
+    <!-- 接单中 –—》》 绿色  #90b900-->
+    <color name="status_release">#90b900</color>
+
+    <color name="btn_draft_pink_press">#ffdfcdcc</color>
+
+    <color name="transparent">#00000000</color>
+    <!--圆形头像的半透明边框颜色-->
+    <color name="head_pic_border">#6fffffff</color>
+    <!--公共按钮按下去的颜色-->
+    <color name="white">#ffffff</color>
+
+    <!-- 订单议价 -->
+    <color name="participants_bg">#f2f2f2</color>
+    <color name="gray_dark">#616161</color>
+
+    <!-- 常用颜色值 -->
+    <color name="gray">#808080</color>
+    <color name="gray_light">#9e9e9e</color>
+    <color name="gray_order_title">#EDEDEB</color>
+
+    <!--输入框的hint的颜色（灰色）-->
+    <color name="edit_text_hint">#acabab</color>
+    <!--公共name字体颜色-->
+    <color name="tv_name">#bec0c2</color>
+    <!--公共灰色背景-->
+    <color name="bg_grey_F7F7F7">#F7F7F7</color>
+    <!--边框背景色-->
+    <color name="border_line_e8e8e8">#e8e8e8</color>
+    <color name="grayLight">#EEEFF0</color>
+    <!-- tag view 相关-->
+    <color name="tag_text_normal">#F3F3F3</color>
+    <color name="tag_text_select">#E8FFF3</color>
+
+    <!--我的发单，我的接单 popup window-->
+    <color name="bg_popup_press">#267634</color>
+    <color name="bg_popup_normal">@color/main_green_26a65b</color>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout style="@style/ll_success">
+
+        <ImageView style="@style/iv_success_ok" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/tv_success_title"
+            android:text="Success" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/tv_success_content"
+            android:text="what you do is success" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_bottom"
+        style="@style/ll_btn_bottom_common">
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/ripple_btn_bottom"
+            style="@style/ripple_btn_bottom_single_navy_blue">
+
+            <TextView
+                android:id="@+id/btn_previous"
+                style="@style/tv_btn_bottom_blue_common"
+                android:text="@string/common_tip_back_to_previous" />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</RelativeLayout>

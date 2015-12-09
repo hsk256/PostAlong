@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey_F7F7F7">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_toolbar"
+        android:orientation="vertical">
+
+        <View
+            style="@style/h_line"
+            android:layout_marginTop="@dimen/dp_10" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_screen"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="版本和屏幕信息" />
+
+                <TextView
+                    style="@style/tv_test_right"
+                    android:text="手机信息等" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_net"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="网络IP" />
+
+                <TextView
+                    android:id="@+id/tv_current_net"
+                    style="@style/tv_test_right"
+                    android:textSize="@dimen/text_size_13"
+                    android:text="校园网服务器" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_clear_sharedprefence"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="清除SharedPreference" />
+
+                <TextView
+                    style="@style/tv_test_right"
+                    android:text="" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_clear_jsession_cookie"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="清除JESSESION COOKIE" />
+
+                <TextView
+                    style="@style/tv_test_right"
+                    android:text="" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_know_app_install"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="查看是否安装了某个程序" />
+
+                <TextView
+                    style="@style/tv_test_right"
+                    android:text="" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rp_test_share"
+            style="@style/ripple_test">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <TextView
+                    style="@style/tv_test_left"
+                    android:layout_centerVertical="true"
+                    android:text="测试微信分享" />
+
+                <TextView
+                    style="@style/tv_test_right"
+                    android:text="" />
+
+                <ImageView style="@style/iv_test_right" />
+            </RelativeLayout>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <View style="@style/h_line" />
+    </LinearLayout>
+
+</RelativeLayout>

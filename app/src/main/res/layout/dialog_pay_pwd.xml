@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_pwd"
+        style="@style/et_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:inputType="textPassword"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:minHeight="@dimen/dp_48"
+        android:paddingRight="@dimen/dp_8" />
+
+    <TextView
+        android:id="@+id/tv_forget_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical|end"
+        android:singleLine="true"
+        android:layout_marginTop="@dimen/dp_7"
+        android:text="@string/password_forget"
+        android:textColor="#ff35a462"
+        android:textSize="@dimen/text_size_14" />
+    <!--<EditText-->
+    <!--android:id="@+id/et_pwd"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_48"-->
+    <!--android:textSize="14sp"-->
+    <!--android:inputType="numberPassword"-->
+    <!--android:background="@drawable/pay_dialog_bg" />-->
+</LinearLayout>
