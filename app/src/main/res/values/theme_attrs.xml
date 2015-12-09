@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--开源中国文件-->
+<resources>
+    <attr name="textColor" format="reference"/>
+
+    <attr name="lineColor" format="reference"/>
+
+</resources>

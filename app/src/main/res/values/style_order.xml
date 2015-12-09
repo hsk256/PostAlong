@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--公共块 宽度填充窗体，高度48dp -->
+    <style name="common_div_match_48dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_48dp</item>
+    </style>
+
+    <!--隐藏的48dp高度div-->
+    <style name="common_div_match_48dp.gone" parent="common_div_match_48dp">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!--创建订单第一个页面 Lin -->
+    <style name="ll_create_order_1" parent="common_div_match_48dp">
+        <!--Override-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/dp_12</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--创建订单第二个页面 Lin -->
+    <style name="ll_create_order_2" parent="common_div_match_48dp">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/dp_12</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_create_order_2.select" parent="ll_create_order_2">
+        <item name="android:background">@drawable/btn_common</item>
+    </style>
+
+    <!--创建订单选择的EditText-->
+    <style name="et_create_order_select.address" parent="et_not_input">
+        <!--Override-->
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:layout_marginLeft">@dimen/dp_8</item>
+    </style>
+
+    <style name="ripple_create_order" parent="ripple_common">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/dp_8</item>
+        <item name="android:minHeight">@dimen/dp_48</item>
+        <item name="mrl_rippleDelayClick">true</item>
+    </style>
+
+    <style name="et_create_order_select.ripple" parent="et_not_input">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/dp_6</item>
+        <item name="android:paddingTop">@dimen/dp_6</item>
+        <item name="android:minHeight">@dimen/dp_48</item>
+        <item name="android:lineSpacingExtra">@dimen/dp_3</item>
+    </style>
+
+    <style name="et_create_order_select.time" parent="et_create_order_select.address">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--创建订单第二个界面的短横条-->
+    <style name="h_line.create_order">
+        <item name="android:layout_marginRight">@dimen/dp_15</item>
+    </style>
+
+    <!--创建订单第一个页面的左侧图片-->
+    <style name="img_create_order_1">
+        <item name="android:layout_width">@dimen/dp_36</item>
+        <item name="android:layout_height">@dimen/dp_36</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--创建订单第二个页面之地址、时间详情的左侧图片-->
+    <style name="img_create_order_2">
+        <item name="android:layout_width">@dimen/dp_36</item>
+        <item name="android:layout_height">@dimen/dp_36</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_5</item>
+    </style>
+
+    <style name="iv_create_order_2_small">
+        <item name="android:layout_width">@dimen/dp_36</item>
+        <item name="android:layout_height">@dimen/dp_36</item>
+    </style>
+
+    <style name="iv_create_order_2_small_2">
+        <item name="android:layout_width">@dimen/dp_18</item>
+        <item name="android:layout_height">@dimen/dp_18</item>
+    </style>
+
+    <style name="iv_create_order_2_vertical">
+        <item name="android:layout_width">@dimen/dp_21</item>
+        <item name="android:layout_height">@dimen/dp_21</item>
+    </style>
+
+    <!--创建订单第二个页面之地址、时间详情的左侧块-->
+    <style name="ll_vertical_create_order_2">
+        <item name="android:layout_width">@dimen/dp_30</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingRight">@dimen/dp_5</item>
+        <item name="android:paddingLeft">@dimen/dp_5</item>
+    </style>
+
+    <!--创建订单第二个页面的右侧文字-->
+    <style name="tv_create_order_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_38</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableRight">@mipmap/ic_arrow_right</item>
+        <item name="android:textColor">@color/tv_name</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <!--创建订单第二个页面的下面右侧输入框-->
+    <style name="et_create_order_2_1" parent="et_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_38</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_8</item>
+        <item name="android:singleLine">false</item>
+    </style>
+    <!--创建订单第二个页面的下面右侧输入框 （手机号）-->
+    <style name="et_create_order_2_2" parent="et_create_order_2_1">
+        <item name="android:layout_marginRight">@dimen/dp_5</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <!--订单详情的表单name字体-->
+    <style name="tv_order_detail_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/tv_name</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--订单详情的表单value字体-->
+    <style name="tv_order_detail_value" parent="tv_order_detail_name">
+        <item name="android:textColor">@color/tv_value</item>
+    </style>
+
+    <!--订单详情的Lin和Relative框-->
+    <style name="ll_rl_order_detail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/dp_20</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--订单详情的Lin和Relative框（横着两个的）-->
+    <style name="ll_rl_order_detail_double_h" parent="ll_rl_order_detail">
+        <!--Override-->
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <!--Override-->
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--订单详情的Lin和Relative框（竖着两个的）-->
+    <style name="ll_rl_order_detail_double_v" parent="ll_rl_order_detail_double_h">
+        <!--Override-->
+        <item name="android:gravity">center</item>
+        <!--Override-->
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:layout_marginBottom">@dimen/dp_10</item>
+        <!--Override-->
+        <item name="android:paddingLeft">@dimen/dp_0</item>
+    </style>
+
+    <!--订单详情的地址详情部分的name字体-->
+    <style name="tv_order_detail_address_name">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/tv_name</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--订单详情的地址详情部分的value字体-->
+    <style name="tv_order_detail_address_value" parent="tv_order_detail_address_name">
+        <!--Override-->
+        <item name="android:textColor">@color/tv_value</item>
+        <!--Override-->
+        <item name="android:layout_weight">3</item>
+    </style>
+
+    <!--接单头部四个按钮的Lin-->
+    <style name="ll_find_order_head">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/bg_grey_F7F7F7</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--接单头部四个升降序图片-->
+    <style name="iv_find_order_head">
+        <item name="android:layout_width">@dimen/dp_10</item>
+        <item name="android:layout_height">@dimen/dp_36</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <!--接单头部四个按钮的字体-->
+    <style name="tv_find_order_head">
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--接单ListView的item name字体-->
+    <style name="tv_find_order_item_name">
+        <item name="android:textSize">@dimen/find_order_tag_name_size</item>
+        <item name="android:textColor">@color/tv_name</item>
+        <item name="android:paddingBottom">@dimen/dp_1</item>
+        <item name="android:layout_marginTop">@dimen/dp_7</item>
+        <item name="android:paddingLeft">@dimen/dp_3</item>
+        <item name="android:paddingRight">@dimen/dp_3</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--接单ListView的item value字体-->
+    <style name="tv_find_order_item_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tv_value</item>
+        <item name="android:textSize">@dimen/find_order_tag_name_size</item>
+        <item name="android:layout_marginLeft">@dimen/find_order_row_left</item>
+        <item name="android:maxEms">9</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--————————草稿箱———————— -->
+    <style name="tv_draft_common">
+        <item name="android:textSize">@dimen/dp_16</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_draft_name" parent="tv_draft_common">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:textColor">@color/tv_name</item>
+    </style>
+
+    <style name="tv_draft_value" parent="tv_draft_common">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/tv_black_1</item>
+    </style>
+
+</resources>

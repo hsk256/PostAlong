@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--——————————————导航栏————————————————-->
+    <!--左侧导航的横线-->
+    <style name="drawer_h_line">
+        <item name="android:background">@color/border_line_e8e8e8</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+    </style>
+
+    <style name="ripple_drawer_row" parent="ripple_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_52</item>
+    </style>
+
+    <style name="rl_drawer_row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="iv_row_icon">
+        <item name="android:layout_width">@dimen/dp_40</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">@dimen/dp_4</item>
+        <item name="android:layout_marginLeft">@dimen/dp_16</item>
+    </style>
+
+    <style name="iv_icon_right">
+        <item name="android:layout_width">@dimen/dp_32</item>
+        <item name="android:layout_height">@dimen/dp_32</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_10</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/icon_arrow_nav</item>
+    </style>
+
+    <style name="tv_row">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/dp_10</item>
+        <!--<item name="android:textColor">@color/tv_black_1</item>-->
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="tv_row_notice" parent="tv_row">
+        <!--Override-->
+        <item name="android:layout_marginLeft">@dimen/dp_5</item>
+        <!--Override-->
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:background">@drawable/bg_tv_circle_blue</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--——————————————主页部分————————————————-->
+    <!--网格ripple-->
+    <style name="ripple_grid" parent="ripple_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="mrl_rippleColor">@color/main_green_26a65b</item>
+        <!--是否效果结束后才触发点击事件-->
+        <item name="mrl_rippleDelayClick">true</item>
+    </style>
+
+    <style name="ll_grid_wrap">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ll_grid">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="iv_grid">
+        <item name="android:layout_width">@dimen/dp_38</item>
+        <item name="android:layout_height">@dimen/dp_38</item>
+    </style>
+
+    <style name="tv_grid">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff06495a</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+    </style>
+
+    <!--banner的文字-->
+    <style name="tv_banner">
+        <item name="android:maxLength">40</item>
+    </style>
+</resources>

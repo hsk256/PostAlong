@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--——按钮相关——-->
+<resources>
+    <!--基础按钮，定义高度-->
+    <style name="btn_base">
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--红色按钮的字体颜色-->
+    <style name="tv_btn_bottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--红色按钮的字体颜色-->
+    <style name="tv_btn_bottom_blue_common" parent="tv_btn_bottom">
+        <item name="android:textColor">@color/tv_btn_blue_common</item>
+    </style>
+
+    <!--底部按钮公共LinearLayout-->
+    <style name="ll_btn_bottom_common">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">#fff</item>
+    </style>
+
+    <!--底部按钮公共LinearLayout（内部的）-->
+    <style name="ll_btn_bottom_common_inner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/btn_bottom_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/btn_bottom_margin_bottom</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_btn_bottom_common.auth">
+        <!--Override-->
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--底部两个按钮的ripple公共-->
+    <style name="ripple_btn_bottom_double">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/height_48dp</item>
+    </style>
+
+    <!--底部两个按钮的ripple，按钮的包裹壳儿（左边）-->
+    <style name="ripple_btn_bottom_double.left" parent="ripple_btn_bottom_double">
+        <item name="android:layout_marginLeft">@dimen/btn_single_bottom_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/btn_double_bottom_margin_left_right</item>
+        <item name="mrl_rippleBackground">@color/btn_navy_blue</item>
+        <item name="mrl_rippleColor">@color/tv_btn_blue_common</item>
+    </style>
+
+    <!--底部两个按钮的ripple，按钮的包裹壳儿（右边）-->
+    <style name="ripple_btn_bottom_double.right" parent="ripple_btn_bottom_double">
+        <item name="android:layout_marginLeft">@dimen/btn_double_bottom_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/btn_single_bottom_margin_left_right</item>
+    </style>
+
+    <!--底部两个按钮的ripple右侧蓝色-->
+    <style name="ripple_btn_bottom_double.right.blue" parent="ripple_btn_bottom_double.right">
+        <item name="mrl_rippleBackground">@color/common_light_blue</item>
+        <item name="mrl_rippleColor">@color/tv_btn_blue_common</item>
+    </style>
+
+    <style name="ripple_btn_bottom_double.right.red" parent="ripple_btn_bottom_double.right">
+        <item name="mrl_rippleBackground">@color/btn_cancel</item>
+        <item name="mrl_rippleColor">@color/btn_red_press</item>
+    </style>
+
+    <!--底部单个按钮的ripple，包含横线-->
+    <style name="ripple_btn_bottom_single">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:layout_marginTop">@dimen/btn_bottom_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/btn_single_bottom_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/btn_single_bottom_margin_left_right</item>
+        <item name="android:layout_marginBottom">@dimen/btn_bottom_margin_bottom</item>
+    </style>
+
+    <!--底部藏青色按钮的ripple-->
+    <style name="ripple_btn_bottom_single_navy_blue" parent="ripple_btn_bottom_single">
+        <item name="mrl_rippleBackground">@color/btn_navy_blue</item>
+        <item name="mrl_rippleColor">@color/tv_btn_blue_common</item>
+    </style>
+
+    <!--红色按钮的字体颜色-->
+    <style name="tv_btn_bottom_red" parent="tv_btn_bottom">
+        <item name="android:textColor">@color/btn_pink</item>
+    </style>
+
+    <!--底部红色按钮的ripple-->
+    <style name="ripple_btn_bottom_single_red" parent="ripple_btn_bottom_single">
+        <item name="mrl_rippleBackground">@color/btn_cancel</item>
+        <item name="mrl_rippleColor">@color/btn_red_press</item>
+    </style>
+
+    <!--青色按钮：ok-->
+    <style name="btn_light_green" parent="btn_base">
+        <item name="android:background">@color/tv_btn_blue_common</item>
+        <item name="android:textColor">@color/main_green_26a65b</item>
+    </style>
+
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--————对话框的按钮————-->
+
+    <style name="ripple_btn_dialog">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">@dimen/height_48dp</item>
+        <item name="mrl_rippleAlpha">0.09</item>
+        <item name="mrl_rippleDimension">@dimen/ripple_r_dimens</item>
+    </style>
+
+    <style name="ripple_btn_dialog.light_green" parent="ripple_btn_dialog">
+        <item name="mrl_rippleBackground">@color/tv_btn_blue_common</item>
+    </style>
+
+    <style name="ripple_btn_dialog.pink" parent="ripple_btn_dialog">
+        <item name="mrl_rippleBackground">@color/btn_pink</item>
+    </style>
+
+    <style name="tv_btn_dialog.light_green" parent="tv_btn_bottom">
+        <item name="android:textColor">@color/main_green_26a65b</item>
+    </style>
+
+    <style name="tv_btn_dialog.pink" parent="tv_btn_bottom">
+        <item name="android:textColor">@color/money_color_d92400</item>
+    </style>
+</resources>

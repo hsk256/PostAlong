@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rl_pay_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/dp_25</item>
+        <item name="android:layout_marginRight">@dimen/dp_25</item>
+    </style>
+
+    <style name="rl_pay_35" parent="rl_pay_base">
+        <item name="android:layout_height">@dimen/dp_35</item>
+    </style>
+
+    <style name="rl_pay_55" parent="rl_pay_base">
+        <item name="android:layout_height">@dimen/dp_55</item>
+    </style>
+
+    <style name="rl_pay_first" parent="rl_pay_35">
+        <item name="android:layout_marginTop">@dimen/dp_25</item>
+    </style>
+
+    <style name="rl_pay_second" parent="rl_pay_35">
+        <item name="android:layout_height">@dimen/dp_35</item>
+    </style>
+
+    <style name="iv_pay_base">
+        <item name="android:layout_width">@dimen/dp_43</item>
+        <item name="android:layout_height">@dimen/dp_43</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="iv_pay_left" parent="iv_pay_base">
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="tv_wallet">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_pay_name_top" parent="tv_wallet">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/edit_text_hint</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="iv_pay_right" parent="iv_pay_base">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="tv_pay_way_name" parent="tv_wallet">
+        <item name="android:textColor">@color/main_black_333</item>
+    </style>
+
+    <style name="tv_pay_way_value" parent="tv_wallet">
+        <item name="android:textColor">@color/edit_text_hint</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <!--————————优惠券模块————————-->
+    <style name="tv_coupon" parent="tv_wallet">
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+    </style>
+
+</resources>
