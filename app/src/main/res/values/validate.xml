@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--手机号最多可填-->
+    <integer name="phone_max">11</integer>
+    <!--验证码最多可填-->
+    <integer name="val_code_max">6</integer>
+    <!--名字最多可填-->
+    <integer name="first_name_max">30</integer>
+    <!--姓氏最多可填-->
+    <integer name="family_name_max">30</integer>
+    <!--登陆密码最多可填-->
+    <integer name="pwd_max">20</integer>
+    <!--支付密码最多可填-->
+    <integer name="pay_pwd_max">20</integer>
+
+    <!--支付密码最多可填-->
+    <integer name="email_max">32</integer>
+    
+    <!--发单：姓名最多可填-->
+    <integer name="first_and_last_name_max">60</integer>
+    <!--发单：物品描述最多可输入-->
+    <integer name="create_order_comment_max">300</integer>
+    <!--发单：发行程描述最多可输入-->
+    <integer name="create_plan_comment_max">300</integer>
+    <!--意见反馈：可输入的最大字数-->
+    <integer name="suggest_max">500</integer>
+
+    <!--申请为递送人：常住地最大字数-->
+    <integer name="settle_address_max">120</integer>
+    <!--申请为递送人：信用卡号码-->
+    <integer name="credit_card_max">20</integer>
+    <!--申请为递送人：证件号码-->
+    <integer name="id_card_max">20</integer>
+</resources>
