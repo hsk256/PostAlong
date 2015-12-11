@@ -6,17 +6,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.postalong.modle.bean.Course;
-import com.postalong.modle.bean.Student;
+import com.postalong.modle.bean.DeliverInfoDto;
+import com.postalong.modle.service.ServiceClient;
 import com.postalong.utils.Log;
 
-import java.util.Observer;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Action0;
-import rx.functions.Action1;
-import rx.functions.Func1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +31,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getCourse();
+        Map paramsMap = new HashMap();
+        paramsMap.put("page","1");
+        paramsMap.put("pageSize","10");
+        paramsMap.put("curJd","106.6007045");
+        paramsMap.put("curWd","29.5342324");
+        paramsMap.put("sortType","dist");
+        paramsMap.put("sortVal","asc");
+        paramsMap.put("reqTime", "2015-12-12 00:56:04");
+       Call<List<DeliverInfoDto.DeliverInfo>> call= ServiceClient.getInstance().getAPIService().getGoodList(paramsMap);
+        call.enqueue(new Callback<List<DeliverInfoDto.DeliverInfo>>() {
+            @Override
+            public void onResponse(Response<List<DeliverInfoDto.DeliverInfo>> response, Retrofit retrofit) {
+                Log.d(TAG,"response");
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                Log.d(TAG,"onError");
+            }
+        });
     }
+
+
 
     private void observable1() {
         Observable<String> myObservable = Observable.create(
@@ -66,97 +90,13 @@ public class MainActivity extends AppCompatActivity {
         myObservable.subscribe(mySubscriber);
     }
 
-    private void observable2() {
-        Observable<String> myObservable1 = Observable.just("littleKang");
-        Action1<String> onNextAction = new Action1<String>() {
-            @Override
-            public void call(String s) {
-                Log.d(TAG,"onNextAction--"+s);
-            }
-        };
-
-        Action1<Throwable> onError = new Action1<Throwable>() {
-            @Override
-            public void call(Throwable throwable) {
-                Log.d(TAG,"onError");
-            }
-        };
 
 
-        Action0 onComplete = new Action0() {
-            @Override
-            public void call() {
-                Log.d(TAG,"onComplete");
-            }
-        };
-        myObservable1.subscribe(onNextAction,onError,onComplete);
-    }
 
 
-    private void observable3() {
-        Observable.just("hello world")
-                .map(new Func1<String, String>() {
-                    @Override
-                    public String call(String s) {
-                        return s+"--littleKang";
-                    }
-                })
-                .subscribe(
-                        new Action1<String>() {
-                            @Override
-                            public void call(String s) {
-                                Log.d(TAG, s);
-                            }
-                        }
-                );
-    }
 
 
-    private void getCourse() {
 
-        Course course1 = new Course("语文");
-        Course course2 = new Course("数学");
-        Course course3 = new Course("英语");
-        Course[] courses1 = new Course[]{course1,course2};
-        Course[] courses2 = new Course[]{course1,course3};
-        Course[] courses3 = new Course[]{course1,course2,course3};
-
-        Student student1 = new Student("student1",courses1);
-        Student student2 = new Student("student2",courses2);
-        Student student3 = new Student("student3",courses3);
-
-        Student[] students = new Student[]{student1,student2,student3};
-
-        Subscriber<Course> subscriber = new Subscriber<Course>() {
-            @Override
-            public void onCompleted() {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(Course course) {
-                Log.d(TAG,course.getName());
-            }
-        };
-
-        Observable.from(students)
-                .flatMap(new Func1<Student, Observable<Course>>() {
-                    @Override
-                    public Observable<Course> call(Student student) {
-
-
-                        return Observable.from(student.getCourse());
-
-
-                    }
-                })
-                .subscribe(subscriber);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
