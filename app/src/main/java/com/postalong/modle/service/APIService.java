@@ -12,7 +12,7 @@ import rx.Observable;
 
 /**
  * Created by heshaokang on 2015/12/11.
- * 所有的请求接口
+ * 所有的数据请求接口均在此类中声明
  */
 public interface APIService {
 

@@ -3,7 +3,7 @@ package com.postalong.utils;
 /**
  * 自定义日志：带开关
  * 
- * @author carmack
+ * @author heshaokang
  * 
  */
 public class Log {
@@ -12,14 +12,24 @@ public class Log {
 
 	public static void i(String key, String value) {
 		if (DEBUG) {
-			android.util.Log.i(key, value);
+			try {
+				android.util.Log.i(key, value);
+			}catch (NullPointerException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 	}
 
 	public static void e(String key, String value) {
 		if (DEBUG) {
-			android.util.Log.e(key, value);
+			try {
+				android.util.Log.e(key, value);
+			}catch (NullPointerException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 	}

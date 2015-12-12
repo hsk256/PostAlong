@@ -9,6 +9,8 @@ import retrofit.RxJavaCallAdapterFactory;
 
 /**
  * Created by heshaokang on 2015/12/11.
+ *
+ * 功能：创建Retrofit网络框架，返回单例
  */
 public class ServiceClient {
     private static ServiceClient instance = null;
