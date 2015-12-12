@@ -6,7 +6,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.postalong.modle.bean.DeliverInfoDto;
+import com.postalong.modle.bean.DeliverInfo;
+import com.postalong.modle.bean.OrderList;
 import com.postalong.modle.service.ServiceClient;
 import com.postalong.utils.Log;
 
@@ -19,7 +20,10 @@ import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 import rx.Observable;
+import rx.Observer;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,26 +35,67 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Map paramsMap = new HashMap();
+
+        Map  paramsMap = new HashMap();
         paramsMap.put("page","1");
         paramsMap.put("pageSize","10");
         paramsMap.put("curJd","106.6007045");
         paramsMap.put("curWd","29.5342324");
-        paramsMap.put("sortType","dist");
-        paramsMap.put("sortVal","asc");
-        paramsMap.put("reqTime", "2015-12-12 00:56:04");
-       Call<List<DeliverInfoDto.DeliverInfo>> call= ServiceClient.getInstance().getAPIService().getGoodList(paramsMap);
-        call.enqueue(new Callback<List<DeliverInfoDto.DeliverInfo>>() {
-            @Override
-            public void onResponse(Response<List<DeliverInfoDto.DeliverInfo>> response, Retrofit retrofit) {
-                Log.d(TAG,"response");
-            }
+        paramsMap.put("sortType", "dist");
+        paramsMap.put("sortVal", "asc");
+        paramsMap.put("reqTime", "2015-12-12 12:30:04");
 
-            @Override
-            public void onFailure(Throwable t) {
-                Log.d(TAG,"onError");
-            }
-        });
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//                Call<DeliverInfo> call= ServiceClient.getInstance().getAPIService().getGoodList(paramsMap);
+//
+//
+//                call.enqueue(new Callback<DeliverInfo>() {
+//                    @Override
+//                    public void onResponse(Response<DeliverInfo> response, Retrofit retrofit) {
+//                        Log.d(TAG,"response--"+response.message());
+//                        List<OrderList> list = response.body().getRes().getOrderList();
+//                        for(OrderList list1:list) {
+//                            Log.d(TAG, list1.getInfo() + "-" + list1.getFinTime() + "-" + list1.getgName());
+//                        }
+//                        Log.d(TAG,"response--"+response.body().getRes().getSortType());
+//                        Log.d(TAG,"response--"+list);
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Throwable t) {
+//                        Log.d(TAG,"OnError--"+t);
+//                    }
+//                });
+//
+//            }
+//        }).start();
+
+        ServiceClient.getInstance().getAPIService().getProductList(paramsMap)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<DeliverInfo>() {
+                    @Override
+                    public void onCompleted() {
+                        Log.d(TAG, "onCompleted");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d(TAG, "onError-" + e);
+                    }
+
+                    @Override
+                    public void onNext(DeliverInfo deliverInfo) {
+                        Log.d(TAG, "response--" + deliverInfo.getRet());
+                        Log.d(TAG, deliverInfo.getRes().getSortType());
+                        Log.d(TAG,deliverInfo.getRes().getOrderList().get(0).getgName());
+                    }
+                });
+
+
     }
 
 

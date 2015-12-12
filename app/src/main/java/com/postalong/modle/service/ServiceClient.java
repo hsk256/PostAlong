@@ -1,22 +1,25 @@
 package com.postalong.modle.service;
 
 
+import com.postalong.base.Api;
+
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
+import retrofit.RxJavaCallAdapterFactory;
 
 /**
  * Created by heshaokang on 2015/12/11.
  */
 public class ServiceClient {
     private static ServiceClient instance = null;
-    private static final String BASE_URL = "http://202.202.43.107:8083";
     private APIService APIService;
 
 
     private ServiceClient() {
         Retrofit retrofit =new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(Api.BASE_URL_CAMPUS)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         APIService = retrofit.create(APIService.class);
     }

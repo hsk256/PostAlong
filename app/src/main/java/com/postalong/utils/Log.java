@@ -26,7 +26,12 @@ public class Log {
 
 	public static void d(String key, String value) {
 		if (DEBUG) {
-			android.util.Log.d(key, value);
+			try {
+				android.util.Log.d(key, value);
+			}catch (NullPointerException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 	}
