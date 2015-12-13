@@ -13,10 +13,14 @@ import android.widget.TextView;
 
 import com.postalong.R;
 import com.postalong.base.BaseActivity;
+import com.postalong.modle.bean.OrderList;
 import com.postalong.module.order.presenter.FindOrderPresenter;
 import com.postalong.utils.BaseUtils;
+import com.postalong.utils.Log;
 import com.postalong.utils.NetWorkUtils;
 import com.postalong.widget.LoadMoreListView;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 
@@ -163,7 +167,7 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
 
         refreshSelectArr[1] = !(refreshSelectArr[0] = refreshSelectArr[2] = refreshSelectArr[3] = false);
 
-
+        findOrderPresenter.getOrderList();
     }
 
     /**
@@ -289,5 +293,10 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
                 break;
         }
 
+    }
+
+    @Override
+    public void setData(ArrayList<OrderList> data) {
+        Log.d(TAG,"data--"+data);
     }
 }

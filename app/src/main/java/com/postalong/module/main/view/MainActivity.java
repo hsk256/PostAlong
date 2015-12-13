@@ -95,7 +95,7 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> {
         paramsMap.put("reqTime", "2015-12-12 12:30:04");
 
 
-        ServiceClient.getInstance().getAPIService().getProductList(paramsMap)
+        ServiceClient.getInstance().getAPIService().getOrdertList(paramsMap)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<DeliverInfo>() {
@@ -113,9 +113,12 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> {
                     public void onNext(DeliverInfo deliverInfo) {
                         Log.d(TAG, "response--" + deliverInfo.getRet());
                         Log.d(TAG, deliverInfo.getRes().getSortType());
-                        Log.d(TAG,deliverInfo.getRes().getOrderList().get(0).getgName());
+                        Log.d(TAG, deliverInfo.getRes().getOrderList().get(0).getgName());
                     }
                 });
+
+
+
     }
 
     @Override
