@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll_toolbar"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/ll_title">
 
-        <com.android.publicexpress.ui.widget.LoadMoreListView
+        <com.postalong.widget.LoadMoreListView
             android:id="@+id/lv_find_order"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

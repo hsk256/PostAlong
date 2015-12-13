@@ -1,6 +1,5 @@
 package com.postalong.module.main.view;
 
-import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -55,15 +54,13 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> {
     private MainFragment mainFragment;
     private MenuItem menuMsg;
     public static boolean hasNewMessage;//是否收到新消息
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        init();
 
-    }
-    private void init() {
-        mainPresenter = new MainPresenter();
+    @Override
+    public void init() {
+        setContentView(R.layout.activity_main);
+        mainFragment = new MainFragment();
+        mainPresenter.replaceFragment(this,mainFragment);
+
         mToolbar.setNavigationIcon(R.mipmap.icon_menu);
         setSupportActionBar(mToolbar);
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,mToolbar,
@@ -82,9 +79,11 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> {
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        //  showSchedule(false);
 
     }
+
+
+
     private void getGoodList() {
         Map paramsMap = new HashMap();
         paramsMap.put("page","1");
@@ -148,6 +147,7 @@ public class MainActivity extends BaseActivity<MainView,MainPresenter> {
 
     @Override
     public MainPresenter createPresenter() {
+        mainPresenter = new MainPresenter();
         return mainPresenter;
     }
 }

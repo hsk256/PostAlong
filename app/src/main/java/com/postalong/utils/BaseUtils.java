@@ -40,6 +40,7 @@ import java.util.Set;
  * 2015年7月
  */
 public class BaseUtils {
+    private static final String TAG = "BaseUtils";
     private static int[] swipeRefreshColors;
 
     public static Context mApplicationContent;

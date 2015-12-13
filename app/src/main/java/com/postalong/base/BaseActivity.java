@@ -24,7 +24,8 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         presenter = createPresenter();
-        presenter.attachView((V)this);
+        presenter.attachView((V) this);
+        init();
     }
 
 
@@ -45,5 +46,12 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
         presenter.detachView();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, R.anim.slide_right_out);
+    }
+
     public abstract T createPresenter();
+    public abstract void init();
 }
