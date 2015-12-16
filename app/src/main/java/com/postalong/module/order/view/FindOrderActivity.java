@@ -4,21 +4,22 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jude.easyrecyclerview.EasyRecyclerView;
+import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
 import com.postalong.R;
 import com.postalong.base.BaseActivity;
 import com.postalong.modle.bean.OrderList;
 import com.postalong.module.order.presenter.FindOrderPresenter;
-import com.postalong.utils.BaseUtils;
+import com.postalong.module.order.presenter.OrderAdapter;
 import com.postalong.utils.Log;
 import com.postalong.utils.NetWorkUtils;
-import com.postalong.widget.LoadMoreListView;
 
 import java.util.ArrayList;
 
@@ -28,16 +29,14 @@ import butterknife.Bind;
  * Created by heshaokang on 2015/12/12.
  */
 public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPresenter>
-        implements FindOrderView,LoadMoreListView.OnLoadMoreListener,SwipeRefreshLayout.OnRefreshListener,View.OnClickListener{
+        implements FindOrderView,View.OnClickListener,RecyclerArrayAdapter.OnLoadMoreListener,SwipeRefreshLayout.OnRefreshListener{
 
     private FindOrderPresenter findOrderPresenter;
     private static final String TAG="FindOrderActivity";
     @Bind(R.id.toolbar)
     Toolbar mToolBar;
     @Bind(R.id.lv_find_order)
-    LoadMoreListView mLvOrders;
-    @Bind(R.id.swipe_container)
-    SwipeRefreshLayout mSwipeRefreshLayout;
+    EasyRecyclerView mOrderRecyclerView;
     @Bind(R.id.tv_latest)
     TextView tv_latest;
     @Bind(R.id.tv_distance)
@@ -70,6 +69,8 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
     @Bind(R.id.ll_title)
     LinearLayout mllTitle;
 
+    //adapter
+    private OrderAdapter orderAdapter;
 
     /**
      * 下拉刷新和上拉加载时发送的message 的waht值
@@ -132,21 +133,27 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
         rl_distance.setOnClickListener(this);
         rl_reward.setOnClickListener(this);
         rl_weight.setOnClickListener(this);
-        mSwipeRefreshLayout.setOnRefreshListener(this);
         selectTabs(R.id.ll_distance);
-        mLvOrders.setLoadMoreListener(this);
-        //加载颜色
-        mSwipeRefreshLayout.setColorSchemeColors(BaseUtils.getRefreshColors());
-//        mLvOrders.setAdapter(ordersAdapter);
-        mLvOrders.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        mOrderRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mOrderRecyclerView.setAdapter(orderAdapter = new OrderAdapter(this));
+        orderAdapter.setMore(R.layout.view_moreprogress, this);
+        orderAdapter.setOnItemClickListener(new RecyclerArrayAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(FindOrderActivity.this, FindOrderDetailActivity.class);
-//                BaseUtils.Toast(data.get(position).getMoney());
-//                intent.putExtra("orderId", data.get(position).getOrderId());
-                startActivity(intent);
+            public void onItemClick(int position) {
+
             }
         });
+
+        orderAdapter.setError(R.layout.view_empty).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                orderAdapter.resumeMore();
+            }
+        });
+
+        mOrderRecyclerView.setRefreshListener(this);
+        onRefresh();
 
 
         //导航栏放进数组
@@ -212,6 +219,51 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
         return ContextCompat.getColor(this,colorRes);
     }
 
+
+    private void sendNetworkRequest(int type) {
+
+        switch (type) {
+            default:
+            case PULL_TO_REFRESH:
+
+                break;
+
+            case LOAD_MORE:
+                Log.d(TAG, "sendNetworkRequest--page:" + PAGE);
+                if (!NetWorkUtils.isNetWorkUsed(FindOrderActivity.this)) {
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                        }
+                    }, 600);
+                }
+                isLoading = true;
+
+                /** 加载时判断是哪个类型的数据请求 设置数据的排序类型 reward和weight内部需要再判断箭头的方向 */
+                if (refreshSelectArr[2]) {
+                    if (!reward_toggle) {
+//                        dto.setSortVal(DESC);
+                    } else {
+//                        dto.setSortVal(ASC);
+                    }
+                } else if (refreshSelectArr[3]) {
+                    if (weight_toggle) {
+//                        dto.setSortVal(DESC);
+                    }
+                    else {
+//                        dto.setSortVal(ASC);
+                    }
+                } else if (refreshSelectArr[1]) {
+//                    dto.setSortVal(ASC);
+                } else if (refreshSelectArr[0]) {
+//                    dto.setSortVal(DESC);
+                }
+//                findOrderPresenter.requestInformation(dto, false);
+                break;
+        }
+    }
+
     /**
      * 上拉加载更多
      */
@@ -227,6 +279,9 @@ public class FindOrderActivity extends BaseActivity<FindOrderView,FindOrderPrese
     public void onRefresh() {
 
     }
+
+
+
 
     @Override
     public void onClick(View v) {

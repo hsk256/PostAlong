@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
@@ -101,19 +102,15 @@
             android:background="@drawable/bg_ll_border_order_title" />
     </LinearLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipe_container"
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/lv_find_order"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ll_title">
-
-        <com.postalong.widget.LoadMoreListView
-            android:id="@+id/lv_find_order"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:dividerHeight="8dp"
-            android:footerDividersEnabled="false" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+        android:dividerHeight="8dp"
+        android:layout_below="@+id/ll_title"
+        android:footerDividersEnabled="false"
+        app:layout_empty="@layout/view_empty"
+        app:layout_progress="@layout/view_progress"/>
 
     <!--<include layout="@layout/include_loading" />-->
 
